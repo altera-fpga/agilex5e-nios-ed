@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ip>
+ <presets version="12.1">
+  <preset
+     name="clock_in"
+     kind="altera_clock_bridge"
+     version="ALL"
+     description=""
+     board="Intel_Agilex_5_FPGA_E-Series_D_065B_Premium_Development_Kit"
+     preset_category="qsys_top">
+   <parameter name="EXPLICIT_CLOCK_RATE" value="125000000" />
+   <parameter name="NUM_CLOCK_OUTPUTS" value="1" />
+   <pin
+       name="in_clk.clk"
+       exported_signal_name="clk_clk"
+       location="PIN_BM71"
+       io_standard="1.2V True Differential Signaling"
+       exported_interface_name="clk" />
+  </preset>
+ </presets>
+</ip>

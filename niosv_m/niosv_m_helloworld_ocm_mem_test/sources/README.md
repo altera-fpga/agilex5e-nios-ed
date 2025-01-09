@@ -38,14 +38,14 @@ a. Required directory structure
 b. Using build_sof.py to compile the design
     - Invoke the quartus_py shell in the terminal
     - Run the following command in the terminal from top level project directory:
-        > quartus_py build_sof.py
+        > quartus_py ./scripts/build_sof.py
     - The quartus tool will compile the design and generate the output files
 
 c. Creating the bsp, build software sources and download elf
     - To create software app, run the following commands in the terminal:
     Note:clean the app build project before regenerating elf
         
-	> niosv-bsp -c --quartus-project=hw/<>.qpf --qsys=hw/<>.qsys --type=hal sw/bsp/settings.bsp
+	> niosv-bsp -c --quartus-project=hw/top.qpf --qsys=hw/qsys_top.qsys --type=hal sw/bsp/settings.bsp
         
 	> niosv-app --bsp-dir=sw/bsp --app-dir=sw/app --srcs=sw/app/main.c
         
@@ -63,11 +63,11 @@ command: jtagconfig --setparam 1 JtagClock 6M
 d. Hardware Validation
     - Program the generated sof and then download the elf file on the board
         
-	> quartus_pgm --cable=1 -m jtag -o 'p;ready_to_test/<top_level_entity_name>.sof'
+	> quartus_pgm --cable=1 -m jtag -o 'p;ready_to_test/top.sof'
     
     - Download the elf file on the board 
     
-	> niosv-download -g ready_to_test/<>.elf -c 1
+	> niosv-download -g ready_to_test/app.elf -c 1
     
     - Verify the output on the terminal by using the following command in the terminal:
     
@@ -79,9 +79,9 @@ Simulation is enabled for this design where the memory is initialized with the a
 
    	> Generate Testbench from Platform Designer. Generate -> Generate Testbench System 
 	
- 	> cd hw/*_tb/*_tb/sim/mentor/
-	
- 	> cp ./sw/app/build/onchip_mem.hex ./*_tb/*_tb/sim/mentor 
+ 	> cp ./sw/app/build/onchip_mem.hex ./qsys_top_tb/qsys_top_tb/sim/mentor 
+
+ 	> cd hw/qsys_top_tb/qsys_top_tb/sim/mentor/
 	
  	> vsim &
 	

@@ -38,7 +38,7 @@ a. Required directory structure
 b. Using build_sof.py to compile the design
     - Invoke the quartus_py shell in the terminal
     - Run the following command in the terminal from top level project directory:
-        > quartus_py build_sof.py
+        > quartus_py ./scripts/build_sof.py
     - The quartus tool will compile the design and generate the output files
 
 c. Creating the bsp, build software sources and download elf
@@ -55,7 +55,7 @@ c. Creating the bsp, build software sources and download elf
 	
         > make -C sw/app/build
 	
- 	> elf2hex sw/app/build/app.elf -b 0x0 -w 32 -e 0x9ffff sw/app/build/onchip_mem.hex -r4
+ 	    > elf2hex sw/app/build/app.elf -b 0x0 -w 32 -e 0x9ffff sw/app/build/onchip_mem.hex -r4
        
 
 Note: Reduce the JTAG clock frequency to 6MHz before programming the application .elf file on the board.

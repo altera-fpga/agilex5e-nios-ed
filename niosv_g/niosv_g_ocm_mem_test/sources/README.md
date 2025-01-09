@@ -40,7 +40,7 @@ b. Using build_sof.py to compile the design
     - Invoke the quartus_py shell in the terminal
     - Run the following command in the terminal from top level project directory:
     
-        > quartus_py /scripts/build_sof.py
+        > quartus_py ./scripts/build_sof.py
 	
     - The quartus tool will compile the design and generate the output files
 

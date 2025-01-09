@@ -4,15 +4,6 @@ This repository contains the Nios V Example designs based on Agilex™ 5 FPGA E-
 
 Development Kit product page- https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-premium.html 
 
-There are three variants of the NiosV core:
-    
-    a. Nios V/m core - Microcontroller- Balanced (For interrupt driven baremetal and RTOS code)
-    
-    b. Nios V/g core - General-Purpose Processor- High Performance (For interrupt driven baremetal and RTOS code)
-
-    c. Nios V/c core - Compact Microcontroller- Smallest (For non-interrupt driven baremetal code)
-
-
 The following table contains the list of Acronyms that the user may come across in the design details
 
 | Acronym | Expansion |
@@ -21,6 +12,14 @@ The following table contains the list of Acronyms that the user may come across 
 | OCM | On-Chip Memory |
 | PIO | Parallel I/O |
 | RTOS | Real Time Operating System |
+
+There are three variants of the NiosV core:
+    
+    a. Nios V/m core - Microcontroller- Balanced (For interrupt driven baremetal and RTOS code)
+    
+    b. Nios V/g core - General-Purpose Processor- High Performance (For interrupt driven baremetal and RTOS code)
+
+    c. Nios V/c core - Compact Microcontroller- Smallest (For non-interrupt driven baremetal code)
 
 
 The following table contains the list of the designs on Agilex 5 FPGA E-Series 065B Premium Development Kit

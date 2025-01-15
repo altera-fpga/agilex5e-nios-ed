@@ -1312,11 +1312,6 @@ proc do_create_qsys_top {} {
 }
 
 proc do_set_exported_interface_sysinfo_parameters {} {
-	load_system qsys_top.qsys
-	set_exported_interface_sysinfo_parameter_value clk clock_domain {1}
-	set_exported_interface_sysinfo_parameter_value clk clock_rate {125000000}
-	set_exported_interface_sysinfo_parameter_value clk reset_domain {1}
-	save_system qsys_top.qsys
 }
 
 # create all the systems, from bottom up

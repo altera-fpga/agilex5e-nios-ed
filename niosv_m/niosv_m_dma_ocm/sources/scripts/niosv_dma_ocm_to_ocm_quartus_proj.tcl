@@ -75,7 +75,7 @@ if {$make_assignments} {
 	set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 	set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
 	set_global_assignment -name DEVICE A5ED065BB32AE6SR0
-        set_global_assignment -name FAMILY "Agilex 5"
+    set_global_assignment -name FAMILY "Agilex 5"
 	set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 	set_global_assignment -name BOARD "Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1"
 	set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
@@ -89,71 +89,34 @@ if {$make_assignments} {
 	set_global_assignment -name IP_FILE ip/qsys_top/qsys_top_jtag_uart_0.ip
 	set_global_assignment -name IP_FILE ip/qsys_top/qsys_top_msgdma_0.ip
 	set_global_assignment -name IP_FILE ip/qsys_top/qsys_top_intel_onchip_memory_0.ip
-        set_global_assignment -name IP_FILE ip/qsys_top/qsys_top_intel_onchip_memory_1.ip
-        set_global_assignment -name IP_FILE ip/qsys_top/qsys_top_intel_onchip_memory_2.ip
-        set_global_assignment -name IP_FILE ip/qsys_top/qsys_top_s10_user_rst_clkgate_0.ip
-        set_global_assignment -name IP_FILE ip/qsys_top/qsys_top_sysid_qsys_0.ip
+    set_global_assignment -name IP_FILE ip/qsys_top/qsys_top_intel_onchip_memory_1.ip
+    set_global_assignment -name IP_FILE ip/qsys_top/qsys_top_intel_onchip_memory_2.ip
+    set_global_assignment -name IP_FILE ip/qsys_top/qsys_top_s10_user_rst_clkgate_0.ip
+    set_global_assignment -name IP_FILE ip/qsys_top/qsys_top_sysid_qsys_0.ip
 	set_global_assignment -name IP_FILE ip/qsys_top/qsys_top_iopll_0.ip
 	set_global_assignment -name QSYS_FILE qsys_top.qsys
 	set_global_assignment -name POWER_APPLY_THERMAL_MARGIN ADDITIONAL
 
 	# Including default assignments
-	set_global_assignment -name FLOW_ENABLE_DESIGN_ASSISTANT ON -family "Agilex 7"
-	set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON -family "Agilex 7"
-	set_global_assignment -name TDC_CCPP_TRADEOFF_TOLERANCE 0 -family "Agilex 7"
-	set_global_assignment -name TIMING_ANALYZER_DO_CCPP_REMOVAL ON -family "Agilex 7"
-	set_global_assignment -name PHYSICAL_SHIFT_REGISTER_INFERENCE ON -family "Agilex 7"
-	set_global_assignment -name SYNCHRONIZATION_REGISTER_CHAIN_LENGTH 3 -family "Agilex 7"
-	set_global_assignment -name SYNTH_RESOURCE_AWARE_INFERENCE_FOR_BLOCK_RAM ON -family "Agilex 7"
-	set_global_assignment -name USE_ADVANCED_DETAILED_LAB_LEGALITY ON -family "Agilex 7"
-	set_global_assignment -name ADVANCED_PHYSICAL_SYNTHESIS_REGISTER_PACKING ON -family "Agilex 7"
-	set_global_assignment -name PHYSICAL_SYNTHESIS ON -family "Agilex 7"
-	set_global_assignment -name POST_ROUTE_PHYSICAL_SYNTHESIS OFF -family "Agilex 7"
-	set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "ACTIVE SERIAL X4" -family "Agilex 7"
-	set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS" -family "Agilex 7"
-	set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON -family "Agilex 7"
-	set_global_assignment -name ENABLE_PHYSICAL_DSP_MERGING ON -family "Agilex 7"
-	set_global_assignment -name AUTO_DELAY_CHAINS ON -family "Agilex 7"
-	set_global_assignment -name ENABLE_ED_CRC_CHECK ON -family "Agilex 7"
-	set_global_assignment -name ALLOW_SEU_FAULT_INJECTION OFF -family "Agilex 7"
-	set_global_assignment -name FITTER_RESYNTHESIS ON -family "Agilex 7"
-	set_global_assignment -name FITTER_EARLY_RETIMING ON -family "Agilex 7"
-	set_global_assignment -name HYPER_EARLY_RETIMER OFF -family "Agilex 7"
-	set_global_assignment -name FLOW_ENABLE_HYPER_RETIMER_FAST_FORWARD OFF -family "Agilex 7"
-	set_global_assignment -name HYPER_RETIMER_FAST_FORWARD_ON_HIERARCHY ON -family "Agilex 7"
-	set_global_assignment -name GENERATE_PR_RBF_FILE ON -family "Agilex 7"
-	set_global_assignment -name HPS_INITIALIZATION "AFTER INIT_DONE" -family "Agilex 7"
-	set_global_assignment -name PROGRAMMING_BITSTREAM_ENCRYPTION_KEY_SELECT "Battery Backup RAM" -family "Agilex 7"
-	set_global_assignment -name POWER_USE_DEVICE_CHARACTERISTICS MAXIMUM -family "Agilex 7"
-	set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_100MHZ -family "Agilex 7"
+
 
 	# Assembler Assignments and VID
 	# =====================
 	# VID Settings: PWRMGMT
-	set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_115MHZ_IOSC
-	set_global_assignment -name PWRMGT_SLAVE_DEVICE_TYPE LTM4677
+
+	set_global_assignment -name PWRMGT_SLAVE_DEVICE_TYPE OTHER
+	set_global_assignment -name PWRMGT_SLAVE_DEVICE0_ADDRESS 60
+	set_global_assignment -name PWRMGT_DIRECT_FORMAT_COEFFICIENT_M 1
+	set_global_assignment -name PWRMGT_TRANSLATED_VOLTAGE_VALUE_UNIT MILLIVOLTS
+	set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "DIRECT FORMAT"
+	set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-12"
 	set_global_assignment -name USE_CONF_DONE SDM_IO16
 	set_global_assignment -name USE_INIT_DONE SDM_IO0
-	set_global_assignment -name USE_CVP_CONFDONE SDM_IO10
-	set_global_assignment -name VID_OPERATION_MODE "PMBUS MASTER"
 	set_global_assignment -name USE_PWRMGT_SCL SDM_IO14
 	set_global_assignment -name USE_PWRMGT_SDA SDM_IO11
-	set_global_assignment -name PWRMGT_BUS_SPEED_MODE "100 KHZ"
-	set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
-	set_global_assignment -name PWRMGT_SLAVE_DEVICE0_ADDRESS 47
-	set_global_assignment -name PWRMGT_SLAVE_DEVICE1_ADDRESS 00
-	set_global_assignment -name PWRMGT_SLAVE_DEVICE2_ADDRESS 00
-	set_global_assignment -name PWRMGT_SLAVE_DEVICE3_ADDRESS 00
-	set_global_assignment -name PWRMGT_SLAVE_DEVICE4_ADDRESS 00
-	set_global_assignment -name PWRMGT_SLAVE_DEVICE5_ADDRESS 00
-	set_global_assignment -name PWRMGT_SLAVE_DEVICE6_ADDRESS 00
-	set_global_assignment -name PWRMGT_SLAVE_DEVICE7_ADDRESS 00
-	set_global_assignment -name PWRMGT_TRANSLATED_VOLTAGE_VALUE_UNIT VOLTS
-	set_global_assignment -name PWRMGT_PAGE_COMMAND_ENABLE OFF
-	set_global_assignment -name PWRMGT_DIRECT_FORMAT_COEFFICIENT_M 1
-	set_global_assignment -name PWRMGT_VOLTAGE_OUTPUT_FORMAT "LINEAR FORMAT"
-	set_global_assignment -name PWRMGT_LINEAR_FORMAT_N "-13"
 
+	#Enable Internal Oscillator
+	set_global_assignment -name DEVICE_INITIALIZATION_CLOCK INIT_INTOSC
 	
 
 	# Pin Assignments

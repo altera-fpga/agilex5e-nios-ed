@@ -1,4 +1,17 @@
-package require -exact qsys 24.3
+# (C) 2001-2024 Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions and other 
+# software and tools, and its AMPP partner logic functions, and any output 
+# files from any of the foregoing (including device programming or simulation 
+# files), and any associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License Subscription 
+# Agreement, Intel FPGA IP License Agreement, or other applicable 
+# license agreement, including, without limitation, that your use is for the 
+# sole purpose of programming logic devices manufactured by Intel and sold by 
+# Intel or its authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+
+
+package require -exact qsys 24.3.1
 
 # create the system "qsys_top"
 proc do_create_qsys_top {} {
@@ -66,6 +79,7 @@ proc do_create_qsys_top {} {
 	set_instantiation_assignment_value embeddedsw.configuration.HDLSimCachesCleared {1}
 	set_instantiation_assignment_value embeddedsw.configuration.cpuArchitecture {Abbotts Lake}
 	set_instantiation_assignment_value embeddedsw.configuration.fpuEnabled {0}
+	set_instantiation_assignment_value embeddedsw.configuration.fsqrtFdivDisabled {0}
 	set_instantiation_assignment_value embeddedsw.configuration.isTimerDevice {1}
 	set_instantiation_assignment_value embeddedsw.configuration.numGpr {32}
 	set_instantiation_assignment_value embeddedsw.configuration.resetOffset {0}
@@ -721,17 +735,17 @@ proc do_create_qsys_top {} {
 	save_instantiation
 	add_component sysid_qsys_0 ip/qsys_top/qsys_top_sysid_qsys_0.ip altera_avalon_sysid_qsys sysid_qsys_0
 	load_component sysid_qsys_0
-	set_component_parameter_value id {165}
+	set_component_parameter_value id {-87110914}
 	set_component_project_property HIDE_FROM_IP_CATALOG {false}
 	save_component
 	load_instantiation sysid_qsys_0
 	remove_instantiation_interfaces_and_ports
-	set_instantiation_assignment_value embeddedsw.CMacro.ID {165}
+	set_instantiation_assignment_value embeddedsw.CMacro.ID {-87110914}
 	set_instantiation_assignment_value embeddedsw.CMacro.TIMESTAMP {0}
 	set_instantiation_assignment_value embeddedsw.dts.compatible {altr,sysid-1.0}
 	set_instantiation_assignment_value embeddedsw.dts.group {sysid}
 	set_instantiation_assignment_value embeddedsw.dts.name {sysid}
-	set_instantiation_assignment_value embeddedsw.dts.params.id {165}
+	set_instantiation_assignment_value embeddedsw.dts.params.id {-87110914}
 	set_instantiation_assignment_value embeddedsw.dts.params.timestamp {0}
 	set_instantiation_assignment_value embeddedsw.dts.vendor {altr}
 	add_instantiation_interface clk clock INPUT

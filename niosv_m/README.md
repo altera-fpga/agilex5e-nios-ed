@@ -1,7 +1,9 @@
 This directory contains the following example designs based on the Nios V/m core:
     
-    a. Helloworld-OCM memory test on Nios V/m core
+    a. Nios V/m Hello World + OCM Memory Test design
 
-    b. DMA-OCM memory tet design on Nios V/m core
+    b. Nios V/m DMA OCM design
 
-    c. PIO LED toggle design on Nios V/m core
+    c. Nios V/m PIO LED design
+
+    d. Nios V/m Baseline GHRD

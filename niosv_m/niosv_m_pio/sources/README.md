@@ -68,7 +68,7 @@ jtagconfig --setparam 1 JtagClock 6M
 ```
 - Download the elf file on the board 
 ```
-niosv-download -g ready_to_test/niosv_app.elf -c 1
+niosv-download -g ready_to_test/app.elf -c 1
 ```
 - Verify the output on the terminal by using the following command in the terminal:
 ```

@@ -12,6 +12,7 @@ The following table contains the list of Acronyms that the user may come across 
 | OCM | On-Chip Memory |
 | PIO | Parallel I/O |
 | RTOS | Real Time Operating System |
+| GHRD | Golden Hardware Reference Design |
 
 There are three variants of the NiosV core:
     
@@ -32,6 +33,7 @@ The following table contains the list of the designs on Agilex 5 FPGA E-Series 0
 | 4 | Nios V/g | Nios V/g Helloworld Design | Nios® V/g Processor-based Helloworld example design<br>[Design details](niosv_g/niosv_g_helloworld/docs/Agilex™_5_FPGA_Nios®V_g_Processor_Helloworld_Design.pdf) |
 | 5 | Nios V/g | Nios V/g OCM Memory Tese Design | Nios® V/g Processor-based OCM memory test example design<br>[Design details](niosv_g/niosv_g_ocm_mem_test/docs/Agilex™_5_FPGA_Nios®V_g_Processor_OCM_test_Design.pdf) |
 | 6 | Nios V/c | Nios V/c Helloworld OCM Memory test Design | Nios® V/c Processor-based Helloworld and OCM memory test example design<br>[Design details](niosv_c/niosv_c_helloworld_ocm_mem_test/docs/Agilex™_5_FPGA_Helloworld_and_OCM_test_design_on_Nios®V_c_Processor.pdf) |
+| 7 | Nios V/m | Nios V/m Baseline Golden Hardware Reference Design (GHRD) | This design demonstrates the baseline Golden Hardware Reference Design (GHRD) for a Nios V/m processor with basic bare minimum peripherals required for any application execution <br>[Design details](niosv_m/niosv_m_baseline_ghrd/docs/Agilex_5_FPGA_NiosV_m_Processor_baseline_ghrd_on_Agilex_5_FPGA.pdf)
 
 
 Refer to the documents in the following link for More information on the Nios V Processor core - [https://www.intel.com/content/www/us/en/support/programmable/support-resources/support-centers/nios-v-support.html ](https://www.intel.com/content/www/us/en/support/programmable/support-resources/support-centers/nios-v-support.html#introtext_1506028531_1693475107)

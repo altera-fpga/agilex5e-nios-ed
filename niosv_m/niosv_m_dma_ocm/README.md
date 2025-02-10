@@ -1,10 +1,6 @@
-This directory contains the following folders:
-
-1. Docs- Document capturing the details of the example design
-
-2. img- block diagram for the example designs
-
-3. ready_to_test- binaries which can be programmed on the board and tested. Refer to the README.md in the sources folder for the steps
-
-4. sources- Files needed to create the design
-
+| Folder Name | Description |
+| ---------- | ----------- |
+| Docs | A single document capturing all the details of the example design. |
+| img | Block diagram of the example design. |
+| ready_to_test | Prebuilt binaries files (can be used for testing on similar dev kits). Refer to README.md in the sources folder for more information. |
+| sources | Raw files and scripts required to recreate/modify the design. |

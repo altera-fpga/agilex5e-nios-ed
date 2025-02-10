@@ -48,23 +48,22 @@ c. Creating the bsp, build software sources and download elf
 - To create software app, run the following commands in the terminal:
 
 - Clean the app build project before regenerating elf
-```
+```        
 niosv-bsp -c --quartus-project=hw/top.qpf --qsys=hw/qsys_top.qsys --type=hal sw/bsp/settings.bsp
 niosv-app --bsp-dir=sw/bsp --app-dir=sw/app --srcs=sw/app/main.c
 niosv-shell
 cmake -S ./sw/app -B sw/app/build -G "Unix Makefiles"
 make -C sw/app/build
 elf2hex sw/app/build/app.elf -b 0x0 -w 32 -e 0x9ffff sw/app/build/onchip_mem.hex -r4
-```   
-
+```
 
 d. Hardware Validation
 - Program the generated sof and then download the elf file on the board
-```
+```  
 quartus_pgm --cable=1 -m jtag -o 'p;ready_to_test/top.sof'
 ```
 - Reduce the JTAG clock frequency to 6MHz before programming the application .elf file on the board.
-```
+``` 
 jtagconfig --setparam 1 JtagClock 6M
 ```
 - Download the elf file on the board 
@@ -72,7 +71,7 @@ jtagconfig --setparam 1 JtagClock 6M
 niosv-download -g ready_to_test/app.elf -c 1
 ```
 - Verify the output on the terminal by using the following command in the terminal:
-```
+``` 
 juart-terminal -d 1 -c 1 -i 0 
 ```
 
@@ -80,10 +79,9 @@ juart-terminal -d 1 -c 1 -i 0
 
 Simulation is enabled for this design where the memory is initialized with the application hex. Use the following commands to run the simulation:
 
-- Generate Testbench from Platform Designer. Generate -> Generate Testbench System
-
-```	  
-cp ./sw/app/build/onchip_mem.hex ./qsys_top_tb/qsys_top_tb/sim/mentor
+- Generate Testbench from Platform Designer. Generate -> Generate Testbench System 
+```	
+cp ./sw/app/build/onchip_mem.hex ./qsys_top_tb/qsys_top_tb/sim/mentor 
 cd hw/qsys_top_tb/qsys_top_tb/sim/mentor/
 vsim &
 source msim_setup.tcl

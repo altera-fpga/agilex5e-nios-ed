@@ -54,7 +54,6 @@ proc do_create_qsys_top {} {
 	set_component_parameter_value enableECCFull {0}
 	set_component_parameter_value enableECCLite {0}
 	set_component_parameter_value enableFPU {0}
-	set_component_parameter_value enableFRNET {0}
 	set_component_parameter_value enableLockstep {0}
 	set_component_parameter_value enableMulDiv {1}
 	set_component_parameter_value funct3 {}

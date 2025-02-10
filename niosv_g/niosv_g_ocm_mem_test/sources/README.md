@@ -1,33 +1,32 @@
 1. Directory structure
 2. Using existing files (sof and elf) to run on hardware
 3. Building the design from scratch
-
-    a.	Required directory structure
-
-    b.	Use of build_sof.py to compile the design
-
-    c.	Steps to create the bsp and build software sources
-
-    d.  Hardware Validation 
     
+    a.	Required directory structure
+    
+    b.	Use of build_sof.py to compile the design
+    
+    c.	Steps to create the bsp and build software sources
+    
+    d.  Hardware Validation 
+
 4. Running simulation
 
 ### 1. Directory Structure:
 
-The directory structure is explained below:
+The directory structure of this top-level project folder is explained below:
 
-- hw- necessary hardware files (.qpf, .qsf, .sv, .v, .ip) of the design
+- hw - necessary hardware files (.qpf, .qsf, .sv, .v, .ip) of the design
 
-- sw- This folder contains software application files
+- sw - This folder contains software application files
 
-- scripts- This folder consists of scripts to build the design
+- scripts - This folder consists of scripts to build the design
 
 ### 2. Using existing files to run the design on hardware
 
 - The sof and elf files required to run the design can be found in "ready_to_test" folder 
 
 - Refer the Hardware validation section (3.d) for the steps  
-
 
 ### 3. Building the design from scratch
 

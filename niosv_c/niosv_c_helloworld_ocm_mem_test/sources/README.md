@@ -22,7 +22,6 @@ The directory structure is explained below:
 
 - scripts - This folder consists of scripts to build the design
 
-
 ### 2. Using existing files to run the design on hardware
 
 - The sof and elf files required to run the design can be found in "ready_to_test" folder 

@@ -1,4 +1,17 @@
-package require -exact qsys 24.1
+# (C) 2001-2025 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions and other 
+# software and tools, and its AMPP partner logic functions, and any output 
+# files from any of the foregoing (including device programming or simulation 
+# files), and any associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License Subscription 
+# Agreement, Altera IP License Agreement, or other applicable 
+# license agreement, including, without limitation, that your use is for the 
+# sole purpose of programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+
+
+package require -exact qsys 25.1
 
 # create the system "qsys_top"
 proc do_create_qsys_top {} {
@@ -65,6 +78,8 @@ proc do_create_qsys_top {} {
 	set_instantiation_assignment_value embeddedsw.configuration.HDLSimCachesCleared {1}
 	set_instantiation_assignment_value embeddedsw.configuration.cpuArchitecture {Small Core}
 	set_instantiation_assignment_value embeddedsw.configuration.fpuEnabled {0}
+	set_instantiation_assignment_value embeddedsw.configuration.fsqrtFdivDisabled {0}
+	set_instantiation_assignment_value embeddedsw.configuration.interruptMode {0}
 	set_instantiation_assignment_value embeddedsw.configuration.numGpr {32}
 	set_instantiation_assignment_value embeddedsw.configuration.resetOffset {0}
 	set_instantiation_assignment_value embeddedsw.configuration.resetSlave {intel_onchip_memory_0.axi_s1}
@@ -84,17 +99,24 @@ proc do_create_qsys_top {} {
 	set_instantiation_interface_parameter_value reset synchronousEdges {DEASSERT}
 	add_instantiation_interface_port reset reset_reset reset 1 STD_LOGIC Input
 	add_instantiation_interface instruction_manager axi4lite OUTPUT
+	set_instantiation_interface_parameter_value instruction_manager addressCheck {false}
 	set_instantiation_interface_parameter_value instruction_manager associatedClock {clk}
 	set_instantiation_interface_parameter_value instruction_manager associatedReset {reset}
-	set_instantiation_interface_parameter_value instruction_manager combinedIssuingCapability {1}
+	set_instantiation_interface_parameter_value instruction_manager combinedIssuingCapability {8}
+	set_instantiation_interface_parameter_value instruction_manager dataCheck {false}
+	set_instantiation_interface_parameter_value instruction_manager enableConcurrentSubordinateAccess {0}
+	set_instantiation_interface_parameter_value instruction_manager isTranslator {false}
 	set_instantiation_interface_parameter_value instruction_manager maximumOutstandingReads {1}
 	set_instantiation_interface_parameter_value instruction_manager maximumOutstandingTransactions {1}
 	set_instantiation_interface_parameter_value instruction_manager maximumOutstandingWrites {1}
+	set_instantiation_interface_parameter_value instruction_manager noRepeatedIdsBetweenSubordinates {0}
 	set_instantiation_interface_parameter_value instruction_manager poison {false}
-	set_instantiation_interface_parameter_value instruction_manager readIssuingCapability {1}
+	set_instantiation_interface_parameter_value instruction_manager readIssuingCapability {8}
+	set_instantiation_interface_parameter_value instruction_manager securityAttribute {false}
 	set_instantiation_interface_parameter_value instruction_manager traceSignals {false}
 	set_instantiation_interface_parameter_value instruction_manager trustzoneAware {true}
 	set_instantiation_interface_parameter_value instruction_manager uniqueIdSupport {false}
+	set_instantiation_interface_parameter_value instruction_manager userData {false}
 	set_instantiation_interface_parameter_value instruction_manager wakeupSignals {false}
 	set_instantiation_interface_parameter_value instruction_manager writeIssuingCapability {1}
 	add_instantiation_interface_port instruction_manager instruction_manager_awaddr awaddr 32 STD_LOGIC_VECTOR Output
@@ -117,17 +139,24 @@ proc do_create_qsys_top {} {
 	add_instantiation_interface_port instruction_manager instruction_manager_rvalid rvalid 1 STD_LOGIC Input
 	add_instantiation_interface_port instruction_manager instruction_manager_rready rready 1 STD_LOGIC Output
 	add_instantiation_interface data_manager axi4lite OUTPUT
+	set_instantiation_interface_parameter_value data_manager addressCheck {false}
 	set_instantiation_interface_parameter_value data_manager associatedClock {clk}
 	set_instantiation_interface_parameter_value data_manager associatedReset {reset}
 	set_instantiation_interface_parameter_value data_manager combinedIssuingCapability {1}
+	set_instantiation_interface_parameter_value data_manager dataCheck {false}
+	set_instantiation_interface_parameter_value data_manager enableConcurrentSubordinateAccess {0}
+	set_instantiation_interface_parameter_value data_manager isTranslator {false}
 	set_instantiation_interface_parameter_value data_manager maximumOutstandingReads {1}
 	set_instantiation_interface_parameter_value data_manager maximumOutstandingTransactions {1}
 	set_instantiation_interface_parameter_value data_manager maximumOutstandingWrites {1}
+	set_instantiation_interface_parameter_value data_manager noRepeatedIdsBetweenSubordinates {0}
 	set_instantiation_interface_parameter_value data_manager poison {false}
 	set_instantiation_interface_parameter_value data_manager readIssuingCapability {1}
+	set_instantiation_interface_parameter_value data_manager securityAttribute {false}
 	set_instantiation_interface_parameter_value data_manager traceSignals {false}
 	set_instantiation_interface_parameter_value data_manager trustzoneAware {true}
 	set_instantiation_interface_parameter_value data_manager uniqueIdSupport {false}
+	set_instantiation_interface_parameter_value data_manager userData {false}
 	set_instantiation_interface_parameter_value data_manager wakeupSignals {false}
 	set_instantiation_interface_parameter_value data_manager writeIssuingCapability {1}
 	add_instantiation_interface_port data_manager data_manager_awaddr awaddr 32 STD_LOGIC_VECTOR Output
@@ -217,10 +246,12 @@ proc do_create_qsys_top {} {
 	set_instantiation_interface_parameter_value clk1 ptfSchematicName {}
 	add_instantiation_interface_port clk1 clk clk 1 STD_LOGIC Input
 	add_instantiation_interface axi_s1 axi4 INPUT
+	set_instantiation_interface_parameter_value axi_s1 addressCheck {false}
 	set_instantiation_interface_parameter_value axi_s1 associatedClock {clk1}
 	set_instantiation_interface_parameter_value axi_s1 associatedReset {reset1}
 	set_instantiation_interface_parameter_value axi_s1 bridgesToMaster {}
 	set_instantiation_interface_parameter_value axi_s1 combinedAcceptanceCapability {1}
+	set_instantiation_interface_parameter_value axi_s1 dataCheck {false}
 	set_instantiation_interface_parameter_value axi_s1 dfhFeatureGuid {0}
 	set_instantiation_interface_parameter_value axi_s1 dfhFeatureId {35}
 	set_instantiation_interface_parameter_value axi_s1 dfhFeatureMajorVersion {0}
@@ -232,15 +263,18 @@ proc do_create_qsys_top {} {
 	set_instantiation_interface_parameter_value axi_s1 dfhParameterId {}
 	set_instantiation_interface_parameter_value axi_s1 dfhParameterName {}
 	set_instantiation_interface_parameter_value axi_s1 dfhParameterVersion {}
+	set_instantiation_interface_parameter_value axi_s1 isTranslator {false}
 	set_instantiation_interface_parameter_value axi_s1 maximumOutstandingReads {1}
 	set_instantiation_interface_parameter_value axi_s1 maximumOutstandingTransactions {1}
 	set_instantiation_interface_parameter_value axi_s1 maximumOutstandingWrites {1}
 	set_instantiation_interface_parameter_value axi_s1 poison {false}
 	set_instantiation_interface_parameter_value axi_s1 readAcceptanceCapability {1}
 	set_instantiation_interface_parameter_value axi_s1 readDataReorderingDepth {1}
+	set_instantiation_interface_parameter_value axi_s1 securityAttribute {false}
 	set_instantiation_interface_parameter_value axi_s1 traceSignals {false}
 	set_instantiation_interface_parameter_value axi_s1 trustzoneAware {true}
 	set_instantiation_interface_parameter_value axi_s1 uniqueIdSupport {false}
+	set_instantiation_interface_parameter_value axi_s1 userData {false}
 	set_instantiation_interface_parameter_value axi_s1 wakeupSignals {false}
 	set_instantiation_interface_parameter_value axi_s1 writeAcceptanceCapability {1}
 	set_instantiation_interface_assignment_value axi_s1 embeddedsw.configuration.isMemoryDevice {1}
@@ -282,6 +316,20 @@ proc do_create_qsys_top {} {
 	add_instantiation_interface_port reset1 reset reset 1 STD_LOGIC Input
 	add_instantiation_interface_port reset1 reset_req reset_req 1 STD_LOGIC Input
 	save_instantiation
+	add_component intel_user_rst_clkgate_0 ip/qsys_top/qsys_top_intel_user_rst_clkgate_0.ip intel_user_rst_clkgate intel_user_rst_clkgate_0
+	load_component intel_user_rst_clkgate_0
+	set_component_parameter_value outputType {Reset Interface}
+	set_component_project_property HIDE_FROM_IP_CATALOG {false}
+	save_component
+	load_instantiation intel_user_rst_clkgate_0
+	remove_instantiation_interfaces_and_ports
+	add_instantiation_interface ninit_done reset OUTPUT
+	set_instantiation_interface_parameter_value ninit_done associatedClock {}
+	set_instantiation_interface_parameter_value ninit_done associatedDirectReset {}
+	set_instantiation_interface_parameter_value ninit_done associatedResetSinks {none}
+	set_instantiation_interface_parameter_value ninit_done synchronousEdges {NONE}
+	add_instantiation_interface_port ninit_done ninit_done reset 1 STD_LOGIC Output
+	save_instantiation
 	add_component iopll_0 ip/qsys_top/qsys_top_iopll_0.ip altera_iopll iopll_0
 	load_component iopll_0
 	set_component_parameter_value gui_active_clk {0}
@@ -318,6 +366,7 @@ proc do_create_qsys_top {} {
 	set_component_parameter_value gui_cascade_outclk_index {0}
 	set_component_parameter_value gui_clk_bad {0}
 	set_component_parameter_value gui_clock_name_global {0}
+	set_component_parameter_value gui_clock_name_instantiation {0}
 	set_component_parameter_value gui_clock_name_string0 {outclk0}
 	set_component_parameter_value gui_clock_name_string1 {outclk1}
 	set_component_parameter_value gui_clock_name_string10 {outclk10}
@@ -382,6 +431,7 @@ proc do_create_qsys_top {} {
 	set_component_parameter_value gui_en_adv_params {0}
 	set_component_parameter_value gui_en_dps_ports {0}
 	set_component_parameter_value gui_en_extclkout_ports {0}
+	set_component_parameter_value gui_en_hvio_reconf {0}
 	set_component_parameter_value gui_en_iossm_reconf {0}
 	set_component_parameter_value gui_en_lvds_ports {Disabled}
 	set_component_parameter_value gui_en_periphery_ports {0}
@@ -574,6 +624,7 @@ proc do_create_qsys_top {} {
 	load_component jtag_uart_0
 	set_component_parameter_value allowMultipleConnections {0}
 	set_component_parameter_value hubInstanceID {0}
+	set_component_parameter_value printingMethod {0}
 	set_component_parameter_value readBufferDepth {64}
 	set_component_parameter_value readIRQThreshold {8}
 	set_component_parameter_value simInputCharacterStream {}
@@ -653,6 +704,7 @@ proc do_create_qsys_top {} {
 	set_instantiation_interface_parameter_value avalon_jtag_slave timingUnits {Cycles}
 	set_instantiation_interface_parameter_value avalon_jtag_slave transparentBridge {false}
 	set_instantiation_interface_parameter_value avalon_jtag_slave waitrequestAllowance {0}
+	set_instantiation_interface_parameter_value avalon_jtag_slave waitrequestTimeout {1024}
 	set_instantiation_interface_parameter_value avalon_jtag_slave wellBehavedWaitrequest {false}
 	set_instantiation_interface_parameter_value avalon_jtag_slave writeLatency {0}
 	set_instantiation_interface_parameter_value avalon_jtag_slave writeWaitStates {0}
@@ -679,20 +731,6 @@ proc do_create_qsys_top {} {
 	set_instantiation_interface_parameter_value irq bridgesToReceiver {}
 	set_instantiation_interface_parameter_value irq irqScheme {NONE}
 	add_instantiation_interface_port irq av_irq irq 1 STD_LOGIC Output
-	save_instantiation
-	add_component s10_user_rst_clkgate_0 ip/qsys_top/qsys_top_s10_user_rst_clkgate_0.ip altera_s10_user_rst_clkgate s10_user_rst_clkgate_0
-	load_component s10_user_rst_clkgate_0
-	set_component_parameter_value outputType {Reset Interface}
-	set_component_project_property HIDE_FROM_IP_CATALOG {false}
-	save_component
-	load_instantiation s10_user_rst_clkgate_0
-	remove_instantiation_interfaces_and_ports
-	add_instantiation_interface ninit_done reset OUTPUT
-	set_instantiation_interface_parameter_value ninit_done associatedClock {}
-	set_instantiation_interface_parameter_value ninit_done associatedDirectReset {}
-	set_instantiation_interface_parameter_value ninit_done associatedResetSinks {none}
-	set_instantiation_interface_parameter_value ninit_done synchronousEdges {NONE}
-	add_instantiation_interface_port ninit_done ninit_done reset 1 STD_LOGIC Output
 	save_instantiation
 	add_component sysid_qsys_0 ip/qsys_top/qsys_top_sysid_qsys_0.ip altera_avalon_sysid_qsys sysid_qsys_0
 	load_component sysid_qsys_0
@@ -767,6 +805,7 @@ proc do_create_qsys_top {} {
 	set_instantiation_interface_parameter_value control_slave timingUnits {Cycles}
 	set_instantiation_interface_parameter_value control_slave transparentBridge {false}
 	set_instantiation_interface_parameter_value control_slave waitrequestAllowance {0}
+	set_instantiation_interface_parameter_value control_slave waitrequestTimeout {1024}
 	set_instantiation_interface_parameter_value control_slave wellBehavedWaitrequest {false}
 	set_instantiation_interface_parameter_value control_slave writeLatency {0}
 	set_instantiation_interface_parameter_value control_slave writeWaitStates {0}
@@ -794,7 +833,7 @@ proc do_create_qsys_top {} {
 	set_connection_parameter_value clock_in.out_clk/iopll_0.refclk resetDomainSysInfo {1}
 	add_connection intel_niosv_c_0.data_manager/intel_onchip_memory_0.axi_s1
 	set_connection_parameter_value intel_niosv_c_0.data_manager/intel_onchip_memory_0.axi_s1 addressMapSysInfo {<address-map><slave name='intel_onchip_memory_0.axi_s1' start='0x0' end='0x100000' datawidth='32' /><slave name='sysid_qsys_0.control_slave' start='0x100000' end='0x100008' datawidth='32' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x100008' end='0x100010' datawidth='32' /></address-map>}
-	set_connection_parameter_value intel_niosv_c_0.data_manager/intel_onchip_memory_0.axi_s1 addressWidthSysInfo {21}
+	set_connection_parameter_value intel_niosv_c_0.data_manager/intel_onchip_memory_0.axi_s1 addressWidthSysInfo {}
 	set_connection_parameter_value intel_niosv_c_0.data_manager/intel_onchip_memory_0.axi_s1 arbitrationPriority {1}
 	set_connection_parameter_value intel_niosv_c_0.data_manager/intel_onchip_memory_0.axi_s1 baseAddress {0x0000}
 	set_connection_parameter_value intel_niosv_c_0.data_manager/intel_onchip_memory_0.axi_s1 defaultConnection {0}
@@ -817,7 +856,7 @@ proc do_create_qsys_top {} {
 	set_connection_parameter_value intel_niosv_c_0.data_manager/intel_onchip_memory_0.axi_s1 slaveDataWidthSysInfo {-1}
 	add_connection intel_niosv_c_0.data_manager/jtag_uart_0.avalon_jtag_slave
 	set_connection_parameter_value intel_niosv_c_0.data_manager/jtag_uart_0.avalon_jtag_slave addressMapSysInfo {<address-map><slave name='intel_onchip_memory_0.axi_s1' start='0x0' end='0x100000' datawidth='32' /><slave name='sysid_qsys_0.control_slave' start='0x100000' end='0x100008' datawidth='32' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x100008' end='0x100010' datawidth='32' /></address-map>}
-	set_connection_parameter_value intel_niosv_c_0.data_manager/jtag_uart_0.avalon_jtag_slave addressWidthSysInfo {21}
+	set_connection_parameter_value intel_niosv_c_0.data_manager/jtag_uart_0.avalon_jtag_slave addressWidthSysInfo {}
 	set_connection_parameter_value intel_niosv_c_0.data_manager/jtag_uart_0.avalon_jtag_slave arbitrationPriority {1}
 	set_connection_parameter_value intel_niosv_c_0.data_manager/jtag_uart_0.avalon_jtag_slave baseAddress {0x00100008}
 	set_connection_parameter_value intel_niosv_c_0.data_manager/jtag_uart_0.avalon_jtag_slave defaultConnection {0}
@@ -840,7 +879,7 @@ proc do_create_qsys_top {} {
 	set_connection_parameter_value intel_niosv_c_0.data_manager/jtag_uart_0.avalon_jtag_slave slaveDataWidthSysInfo {-1}
 	add_connection intel_niosv_c_0.data_manager/sysid_qsys_0.control_slave
 	set_connection_parameter_value intel_niosv_c_0.data_manager/sysid_qsys_0.control_slave addressMapSysInfo {<address-map><slave name='intel_onchip_memory_0.axi_s1' start='0x0' end='0x100000' datawidth='32' /><slave name='sysid_qsys_0.control_slave' start='0x100000' end='0x100008' datawidth='32' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x100008' end='0x100010' datawidth='32' /></address-map>}
-	set_connection_parameter_value intel_niosv_c_0.data_manager/sysid_qsys_0.control_slave addressWidthSysInfo {21}
+	set_connection_parameter_value intel_niosv_c_0.data_manager/sysid_qsys_0.control_slave addressWidthSysInfo {}
 	set_connection_parameter_value intel_niosv_c_0.data_manager/sysid_qsys_0.control_slave arbitrationPriority {1}
 	set_connection_parameter_value intel_niosv_c_0.data_manager/sysid_qsys_0.control_slave baseAddress {0x00100000}
 	set_connection_parameter_value intel_niosv_c_0.data_manager/sysid_qsys_0.control_slave defaultConnection {0}
@@ -863,7 +902,7 @@ proc do_create_qsys_top {} {
 	set_connection_parameter_value intel_niosv_c_0.data_manager/sysid_qsys_0.control_slave slaveDataWidthSysInfo {-1}
 	add_connection intel_niosv_c_0.instruction_manager/intel_onchip_memory_0.axi_s1
 	set_connection_parameter_value intel_niosv_c_0.instruction_manager/intel_onchip_memory_0.axi_s1 addressMapSysInfo {<address-map><slave name='intel_onchip_memory_0.axi_s1' start='0x0' end='0x100000' datawidth='32' /></address-map>}
-	set_connection_parameter_value intel_niosv_c_0.instruction_manager/intel_onchip_memory_0.axi_s1 addressWidthSysInfo {20}
+	set_connection_parameter_value intel_niosv_c_0.instruction_manager/intel_onchip_memory_0.axi_s1 addressWidthSysInfo {}
 	set_connection_parameter_value intel_niosv_c_0.instruction_manager/intel_onchip_memory_0.axi_s1 arbitrationPriority {1}
 	set_connection_parameter_value intel_niosv_c_0.instruction_manager/intel_onchip_memory_0.axi_s1 baseAddress {0x0000}
 	set_connection_parameter_value intel_niosv_c_0.instruction_manager/intel_onchip_memory_0.axi_s1 defaultConnection {0}
@@ -884,6 +923,10 @@ proc do_create_qsys_top {} {
 	set_connection_parameter_value intel_niosv_c_0.instruction_manager/intel_onchip_memory_0.axi_s1 qsys_mm.syncResets {TRUE}
 	set_connection_parameter_value intel_niosv_c_0.instruction_manager/intel_onchip_memory_0.axi_s1 qsys_mm.widthAdapterImplementation {GENERIC_CONVERTER}
 	set_connection_parameter_value intel_niosv_c_0.instruction_manager/intel_onchip_memory_0.axi_s1 slaveDataWidthSysInfo {-1}
+	add_connection intel_user_rst_clkgate_0.ninit_done/iopll_0.reset
+	set_connection_parameter_value intel_user_rst_clkgate_0.ninit_done/iopll_0.reset clockDomainSysInfo {2}
+	set_connection_parameter_value intel_user_rst_clkgate_0.ninit_done/iopll_0.reset clockResetSysInfo {}
+	set_connection_parameter_value intel_user_rst_clkgate_0.ninit_done/iopll_0.reset resetDomainSysInfo {2}
 	add_connection iopll_0.locked/intel_niosv_c_0.reset
 	set_connection_parameter_value iopll_0.locked/intel_niosv_c_0.reset clockDomainSysInfo {2}
 	set_connection_parameter_value iopll_0.locked/intel_niosv_c_0.reset clockResetSysInfo {}
@@ -920,10 +963,6 @@ proc do_create_qsys_top {} {
 	set_connection_parameter_value iopll_0.outclk0/sysid_qsys_0.clk clockRateSysInfo {100000000.0}
 	set_connection_parameter_value iopll_0.outclk0/sysid_qsys_0.clk clockResetSysInfo {}
 	set_connection_parameter_value iopll_0.outclk0/sysid_qsys_0.clk resetDomainSysInfo {3}
-	add_connection s10_user_rst_clkgate_0.ninit_done/iopll_0.reset
-	set_connection_parameter_value s10_user_rst_clkgate_0.ninit_done/iopll_0.reset clockDomainSysInfo {2}
-	set_connection_parameter_value s10_user_rst_clkgate_0.ninit_done/iopll_0.reset clockResetSysInfo {}
-	set_connection_parameter_value s10_user_rst_clkgate_0.ninit_done/iopll_0.reset resetDomainSysInfo {2}
 
 	# add the exports
 	set_interface_property clk EXPORT_OF clock_in.in_clk
@@ -961,17 +1000,17 @@ proc do_create_qsys_top {} {
  <element __value="intel_onchip_memory_0.axi_s1">
   <datum __value="baseAddress" value="0" type="String" />
  </element>
- <element __value="iopll_0">
+ <element __value="intel_user_rst_clkgate_0">
   <datum __value="_sortIndex" value="2" type="int" />
+ </element>
+ <element __value="iopll_0">
+  <datum __value="_sortIndex" value="1" type="int" />
  </element>
  <element __value="jtag_uart_0">
   <datum __value="_sortIndex" value="4" type="int" />
  </element>
  <element __value="jtag_uart_0.avalon_jtag_slave">
   <datum __value="baseAddress" value="1048584" type="String" />
- </element>
- <element __value="s10_user_rst_clkgate_0">
-  <datum __value="_sortIndex" value="1" type="int" />
  </element>
  <element __value="sysid_qsys_0">
   <datum __value="_sortIndex" value="6" type="int" />
@@ -992,9 +1031,7 @@ proc do_create_qsys_top {} {
 
 proc do_set_exported_interface_sysinfo_parameters {} {
 	load_system qsys_top.qsys
-	#set_exported_interface_sysinfo_parameter_value clk clock_domain {1}
 	set_exported_interface_sysinfo_parameter_value clk clock_rate {100000000}
-	#set_exported_interface_sysinfo_parameter_value clk reset_domain {1}
 	save_system qsys_top.qsys
 }
 

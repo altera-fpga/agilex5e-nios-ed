@@ -1,3 +1,37 @@
+# Agilex 5 FPGA - Nios V/c Helloworld OCM Memory test Design
+
+Nios® V/c Processor-based Helloworld and OCM memory test example design
+
+## Description
+
+This design prints a simple Hello World message and performs a simple OCM memory test for the Agilex™ 5 FPGA E-Series 065B Premium Development Kit.
+
+![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_c/niosv_c_helloworld_ocm_mem_test/img/hello_world_ocm.png)
+
+## Project Details
+
+- **Title**: Agilex 5 FPGA- Nios V/c Helloworld OCM Memory test Design
+- **Source**: Github
+- **Design Support**: SCTH
+- **Family**: Agilex 5
+- **Quartus Version**: 25.1.0
+- **Development Kit**: Agilex 5 FPGA E*Series 065B Premium Development Kit DK*A5E065BB32AES1
+- **Device Part**: A5ED065BB32AE6SR0
+- **Design Package**: agilex5_niosv_c_helloworld_ocm_mem_test.zip
+- **Category**: Helloworld
+- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.0/niosv_c/niosv_c_helloworld_ocm_mem_test
+- **downloadURL**:https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1-v1.0/agilex5_niosv_c_helloworld_ocm_mem_test.zi- 
+
+## Documentation
+
+- **Title**: Design Document
+- **URL**:  https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_c/niosv_c_helloworld_ocm_mem_test/docs/Nios_Vc_Processor_Helloworld_OCM_Memory_Test_Design_on_Agilex_5_FPGA.md
+
+# Getting Started
+
+Vendor: Altera
+
+
 1. Directory structure
 2. Using existing files (sof and elf) to run on hardware
 3. Building the design from scratch

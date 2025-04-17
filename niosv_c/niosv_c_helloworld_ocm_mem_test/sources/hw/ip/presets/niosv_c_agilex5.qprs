@@ -6,7 +6,7 @@
      kind="intel_niosv_c"
      version="All"
      description="preset for niosv compact core"
-     board="Intel Agilex 5 FPGA E-Series DK A5E065BB32AES1 Premium Development Kit,Intel Agilex 5 FPGA E-Series DK A5E065BB32AES1 Premium Development Kit"
+     board="Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1"
      preset_category="NiosV">
    <parameter name="resetOffset" value="0" />
    <parameter name="enableECCLite" value="false" />

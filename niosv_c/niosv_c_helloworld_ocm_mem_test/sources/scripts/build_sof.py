@@ -1,3 +1,16 @@
+# (C) 2001-2025 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions and other 
+# software and tools, and its AMPP partner logic functions, and any output 
+# files from any of the foregoing (including device programming or simulation 
+# files), and any associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License Subscription 
+# Agreement, Altera IP License Agreement, or other applicable 
+# license agreement, including, without limitation, that your use is for the 
+# sole purpose of programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+
+
 ####################################################################################
 # Python code to generate the .sof file from qsys and qpf tcl files
 
@@ -73,6 +86,14 @@ generate_ip = subprocess.Popen(["quartus_ipgenerate","{}".format(qpf_dir)], stdo
 for line in generate_ip.stdout:
     logfile.write(line)
 generate_ip.wait()
+
+
+# Generate hex file
+app_creation = subprocess.Popen(["niosv-shell < scripts/niosv_app_creation.sh"], stdout=subprocess.PIPE, stderr=subprocess.STDOUT,shell= True)
+for line in app_creation.stdout:
+    logfile.write(line)
+app_creation.wait()
+
 
 # Synthesis
 quartus_sync = subprocess.Popen(["quartus_syn","{}".format(qpf_dir)], stdout=subprocess.PIPE, stderr=subprocess.STDOUT,cwd=cwd_1)

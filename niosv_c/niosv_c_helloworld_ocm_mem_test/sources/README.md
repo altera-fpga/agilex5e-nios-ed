@@ -20,7 +20,7 @@ This design prints a simple Hello World message and performs a simple OCM memory
 - **Design Package**: agilex5_niosv_c_helloworld_ocm_mem_test.zip
 - **Category**: Helloworld
 - **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.0/niosv_c/niosv_c_helloworld_ocm_mem_test
-- **downloadURL**:https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1-v1.0/agilex5_niosv_c_helloworld_ocm_mem_test.zip 
+- **downloadURL**:https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.0-v1.0/agilex5_niosv_c_helloworld_ocm_mem_test.zip
 
 ## Documentation
 

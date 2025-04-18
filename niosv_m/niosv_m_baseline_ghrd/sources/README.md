@@ -19,8 +19,8 @@
 - **Device Part**: A5ED065BB32AE6SR0
 - **Design Package**: agilex5_niosv_m_baseline_ghrd.zip
 - **Category**: GHRD
-- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_m/niosv_m_baseline_ghrd
-- **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1-v1.0/agilex5_niosv_m_baseline_ghrd.zip
+- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.0/niosv_m/niosv_m_baseline_ghrd
+- **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.0-v1.0/agilex5_niosv_m_baseline_ghrd.zip
 
 ## Documentation
 
@@ -91,7 +91,7 @@ niosv-app --bsp-dir=sw/bsp --app-dir=sw/app --srcs=sw/app/main.c
 niosv-shell
 cmake -S ./sw/app -B sw/app/build -G "Unix Makefiles"
 make -C sw/app/build
-elf2hex sw/app/build/app.elf -b 0x0 -w 32 -e 0x9ffff sw/app/build/onchip_mem.hex -r4
+elf2hex sw/app/build/app.elf -b 0x0 -w 32 -e 0xfffff sw/app/build/onchip_mem.hex -r4
 ```
 
 d. Hardware Validation

@@ -14,12 +14,12 @@ This design demonstrates the TinyML application using LiteRT for microcontroller
 * **Source**: Github
 * **Design Support**: CTH
 * **Family**: Agilex 5
-* **Quartus Version**: 25.1.0 Pro
+* **Quartus Version**: 25.1.0
 * **Development Kit**: Agilex 5 FPGA E*Series 065B Premium Development Kit DK*A5E065BB32AES1
 * **Device Part**: A5ED065BB32AE6SR0
 * **Design Package**: agilex5_niosv_g_tinyml_liteRT.zip
 * **Category**: Machine Learning
-* **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.0/niosv_g/tinyml_liteRT
+* **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.0/niosv_g/agilex5_niosv_g_tinyml_liteRT
 * **downloadURL**:https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.0-v1.0/agilex5_niosv_g_tinyml_liteRT.zip
 
 ## Documentation

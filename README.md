@@ -4,7 +4,7 @@ This repository contains the Nios V Example designs based on Agilex™ 5 FPGA E-
 
 Development Kit product page- https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-premium.html 
 
-**25.1 Release Notes**
+**25.1.0 New Releases**
 
 *1. [TinyML Design and Application on Nios V/g core](niosv_g/tinyml_liteRT/docs/Nios_Vg_Processor_TinyML_Design_on_Agilex_5_FPGA.md)*
 

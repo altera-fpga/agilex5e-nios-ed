@@ -110,11 +110,10 @@ niosv-shell
 cmake -S ./sw/app -B sw/app/build -G "Unix Makefiles"
 make -C sw/app/build
 elf2hex sw/app/build/app.elf -b 0x0 -w 32 -e 0xfffff hw/onchip_mem.hex -r4
-
-Note:The software can be compiled using the Ashling Visual Studio Code Extension for Altera FPGAs
-For information on the build process, please refer to the following document- https://www.intel.com/content/www/us/en/docs/programmable/730783/25-1/ashling-visual-studio-code-extension.html
-
 ```
+Note:The software can be compiled using the Ashling Visual Studio Code Extension for Altera FPGAs
+For information on the build process, please refer to the following document- [https://www.intel.com/content/www/us/en/docs/programmable/730783/25-1/ashling-visual-studio-code-extension.html](https://www.intel.com/content/www/us/en/docs/programmable/730783/25-1/ashling-visual-studio-code-extension.html)
+
 
 ### Programing 
 Note: Reduce the JTAG clock frequency to 6MHz using the following command, before programming the sof file

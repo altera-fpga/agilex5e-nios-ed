@@ -4,6 +4,13 @@ This repository contains the Nios V Example designs based on Agilex™ 5 FPGA E-
 
 Development Kit product page- https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-premium.html 
 
+**25.1 Release Notes**
+
+*1. [TinyML Design and Application on Nios V/g core](niosv_g/tinyml_liteRT/docs/Nios_Vg_Processor_TinyML_Design_on_Agilex_5_FPGA.md)*
+
+*2. [Ashling VSCode Extension](https://www.intel.com/content/www/us/en/docs/programmable/730783/25-1/ashling-visual-studio-code-extension.html)*
+
+
 The following table contains the list of Acronyms that the user may come across in the design details
 
 | Acronym | Expansion |
@@ -13,6 +20,7 @@ The following table contains the list of Acronyms that the user may come across 
 | PIO | Parallel I/O |
 | RTOS | Real Time Operating System |
 | GHRD | Golden Hardware Reference Design |
+| VS | Visual Studio |
 
 There are three variants of the NiosV core:
     

@@ -8,7 +8,7 @@ Development Kit product page- https://www.intel.com/content/www/us/en/products/d
 
 *1. [TinyML Design and Application on Nios V/g core](niosv_g/tinyml_liteRT/docs/Nios_Vg_Processor_TinyML_Design_on_Agilex_5_FPGA.md)*
 
-*2. [Ashling VSCode Extension](https://www.intel.com/content/www/us/en/docs/programmable/730783/25-1/ashling-visual-studio-code-extension.html)*
+*2. [Ashling VSCode Extension](https://www.intel.com/content/www/us/en/docs/programmable/730783/current/ashling-visual-studio-code-extension.html)*
 
 
 The following table contains the list of Acronyms that the user may come across in the design details

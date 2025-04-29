@@ -104,7 +104,8 @@ cmake -S sw/tflite_app -B sw/tflite_app/build/Release -G "Unix Makefiles" -DCMAK
 make -C sw/tflite_app/build/Release
 ```
 Note:The software can be compiled using the Ashling Visual Studio Code Extension for Altera FPGAs
-For information on the build process, please refer to the following document- [https://www.intel.com/content/www/us/en/docs/programmable/730783/25-1/ashling-visual-studio-code-extension.html](https://www.intel.com/content/www/us/en/docs/programmable/730783/25-1/ashling-visual-studio-code-extension.html)
+
+For information on the build process, please refer to the following document- [Ashling VSCode Extension](https://www.intel.com/content/www/us/en/docs/programmable/730783/current/ashling-visual-studio-code-extension.html)
 
 ### Programing 
 Note: Reduce the JTAG clock frequency to 6MHz using the following command, before programming the sof file

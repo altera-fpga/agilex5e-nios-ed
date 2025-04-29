@@ -94,7 +94,8 @@ make -C sw/app/build
 elf2hex sw/app/build/app.elf -b 0x0 -w 32 -e 0xfffff sw/app/build/onchip_mem.hex -r4
 ```
 Note:The software can be compiled using the Ashling Visual Studio Code Extension for Altera FPGAs
-For information on the build process, please refer to the following document- [https://www.intel.com/content/www/us/en/docs/programmable/730783/25-1/ashling-visual-studio-code-extension.html](https://www.intel.com/content/www/us/en/docs/programmable/730783/25-1/ashling-visual-studio-code-extension.html)
+
+For information on the build process, please refer to the following document- [Ashling VSCode Extension](https://www.intel.com/content/www/us/en/docs/programmable/730783/current/ashling-visual-studio-code-extension.html)
 
 d. Hardware Validation
 - Program the generated sof and then download the elf file on the board

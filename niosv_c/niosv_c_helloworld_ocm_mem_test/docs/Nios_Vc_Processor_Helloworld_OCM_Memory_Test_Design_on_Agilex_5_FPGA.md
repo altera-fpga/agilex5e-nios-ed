@@ -20,7 +20,7 @@
 ### Nios® V/c Helloworld OCM Memory test Design Archiecture
  This example design includes a Nios® V/c processor connected to the On Chip RAM-II, JTAG UART IP, Parallel-IO and System ID peripheral core. The objective of the design is to accomplish data transfer between the processor and soft IP peripherals.
  
- ![Block Diagram](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_c/niosv_c_helloworld_ocm_mem_test/img/hello_world_ocm.png)
+ ![Block Diagram](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_c/niosv_c_helloworld_ocm_mem_test/img/hello_world_ocm.png?raw=true)
 
 #### Nios® V/c Processor
 - Microcontroller- Balanced (For interrupt driven baremetal and RTOS code)

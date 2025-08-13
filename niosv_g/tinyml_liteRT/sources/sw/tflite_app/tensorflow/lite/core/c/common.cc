@@ -151,7 +151,7 @@ void TfLiteFloatArrayFree(TfLiteFloatArray* a) { TfLiteVarArrayFree(a); }
 
 void TfLiteTensorDataFree(TfLiteTensor* t) {
   if (t->allocation_type == kTfLiteVariantObject && t->data.data) {
-    delete static_cast<VariantData*>(t->data.data);
+    free(t->data.data);
   } else if (t->allocation_type == kTfLiteDynamic ||
              t->allocation_type == kTfLitePersistentRo) {
     if (t->data.raw) {

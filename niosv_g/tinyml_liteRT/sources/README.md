@@ -6,7 +6,7 @@ Nios® V/g Processor-based TinyML LiteRT example design on the Agilex® 5 FPGA.
 
 This design demonstrates the TinyML application using LiteRT for microcontrollers software with Nios® V/g processor in the Agilex™ 5 FPGA E-Series 065B Premium Development Kit (ES1) DK-A5E065BB32AES1. 
 
-![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_g/tinyml_liteRT/img/block_diagram.png)
+![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.1/niosv_g/tinyml_liteRT/img/block_diagram.png)
 
 ## Project Details
 
@@ -14,24 +14,24 @@ This design demonstrates the TinyML application using LiteRT for microcontroller
 * **Source**: Github
 * **Design Support**: CTH
 * **Family**: Agilex 5
-* **Quartus Version**: 25.1.0
+* **Quartus Version**: 25.1.1
 * **Development Kit**: Agilex 5 FPGA E*Series 065B Premium Development Kit DK*A5E065BB32AES1
 * **Device Part**: A5ED065BB32AE6SR0
 * **Design Package**: agilex5_niosv_g_tinyml_liteRT.zip
 * **Category**: Machine Learning
-* **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.0/niosv_g/agilex5_niosv_g_tinyml_liteRT
-* **downloadURL**:https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.0-v1.0/agilex5_niosv_g_tinyml_liteRT.zip
+* **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.1/niosv_g/tinyml_liteRT
+* **downloadURL**:https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.1-v1.0/agilex5_niosv_g_tinyml_liteRT.zip
 
 ## Documentation
 
 * **Title**: Design Document 
-* **URL**:   https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_g/tinyml_liteRT/docs/Nios_Vg_Processor_TinyML_Design_on_Agilex_5_FPGA.md
+* **URL**:   https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.1/niosv_g/tinyml_liteRT/img/block_diagram.png
 
 # Getting Started
 
 Vendor: Altera
 
-Devkit Product Page: www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/f-series/dev-agf014.html
+Devkit Product Page: [ https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-premium.html](https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-premium.html)
 
 1. Directory structure
 2. Using existing files (sof and elf) to run on hardware
@@ -87,9 +87,6 @@ niosv-app -b=sw/tflite_bsp -a=sw/tflite_app -S=sw/tflite_app/image_classificatio
 cmake -S sw/tflite_app -B sw/tflite_app/build/Release -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
 make -C sw/tflite_app/build/Release
 ```
-Note:The software can be compiled using the Ashling Visual Studio Code Extension for Altera FPGAs
-
-For information on the build process, please refer to the following document- [Ashling VSCode Extension](https://www.intel.com/content/www/us/en/docs/programmable/730783/current/ashling-visual-studio-code-extension.html)
 
 d. Hardware Validation
 - Program the generated sof and then download the elf file on the board

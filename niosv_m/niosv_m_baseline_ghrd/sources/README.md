@@ -6,7 +6,7 @@
 
  This example design includes a Nios® V/m processor connected to the On Chip RAM-II, JTAG UART IP, Parallel-IO and System ID peripheral core. The objective of the design is to accomplish data transfer between the processor and soft IP peripherals.
 
-![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_m/niosv_m_baseline_ghrd/img/baseling_ghrd_block_design.png)
+![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.1/niosv_m/niosv_m_baseline_ghrd/img/baseling_ghrd_block_design.png)
 
 ## Project Details
 
@@ -14,18 +14,18 @@
 - **Source**: Github
 - **Design Support**: SCTH
 - **Family**: Agilex 5
-- **Quartus Version**: 25.1.0
+- **Quartus Version**: 25.1.1
 - **Development Kit**: Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1
 - **Device Part**: A5ED065BB32AE6SR0
 - **Design Package**: agilex5_niosv_m_baseline_ghrd.zip
 - **Category**: GHRD
-- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.0/niosv_m/niosv_m_baseline_ghrd
-- **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.0-v1.0/agilex5_niosv_m_baseline_ghrd.zip
+- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.1/niosv_m/niosv_m_baseline_ghrd
+- **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.1-v1.0/agilex5_niosv_m_baseline_ghrd.zip
 
 ## Documentation
 
 - **Title**: Design Document
-- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_m/niosv_m_baseline_ghrd/docs/NiosV_m_Processor_baseline_ghrd_on_Agilex_5_FPGA.md
+- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.1/niosv_m/niosv_m_baseline_ghrd/docs/NiosV_m_Processor_baseline_ghrd_on_Agilex_5_FPGA.md
 
 
 # Getting Started

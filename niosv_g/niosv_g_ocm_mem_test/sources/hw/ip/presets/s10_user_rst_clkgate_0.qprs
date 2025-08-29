@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ip>
+ <presets version="12.1">
+  <preset
+     name="s10_user_rst_clkgate_0"
+     kind="altera_s10_user_rst_clkgate"
+     version="ALL"
+     description=""
+     board="Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1"
+     preset_category="qsys_top">
+   <parameter name="outputType" value="Reset Interface" />
+  </preset>
+ </presets>
+</ip>

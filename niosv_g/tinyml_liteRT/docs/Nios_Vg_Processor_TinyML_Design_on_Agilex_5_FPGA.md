@@ -12,14 +12,14 @@ This design demonstrates the TinyML application using LiteRT for microcontroller
 ### Release Contents  
 
 #### Binaries
- - Prebuilt binaries are located [here](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_g/tinyml_liteRT/ready_to_test).
+ - Prebuilt binaries are located [here](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.1/niosv_g/tinyml_liteRT/ready_to_test).
  - The sof and elf files required to run the design can be found in "ready_to_test" folder 
  - Program the sof and download the elf file on board
 
-### Nios® V/g TinyML LiteRT Design Archiecture
+### Nios® V/g TinyML LiteRT Design Architecture
  This example design includes a Nios® V processor connected to the On Chip RAM-II, JTAG UART IP and System ID peripheral core. The objective of the design is to accomplish data transfer between the processor and soft IP peripherals.
  
- ![Block Diagram](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_g/tinyml_liteRT/img/block_diagram.png?raw=true)
+ ![Block Diagram](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.1/niosv_g/tinyml_liteRT/img/block_diagram.png)
 
 #### Nios® V/g Processor 
 - Balanced (For interrupt driven baremetal and RTOS code)
@@ -54,7 +54,7 @@ This design demonstrates the TinyML application using LiteRT for microcontroller
   |0x0041_0048|8|System ID|Hardware configuration system ID (0x00000009)|
 
 
-## User Flow 
+### User Flow 
 
  There are two ways to test the design based on use case. 
 
@@ -76,10 +76,10 @@ This design demonstrates the TinyML application using LiteRT for microcontroller
 #### Tools Download and Installation
 1. Quartus Prime Pro
 
- - Download the Quartus® Prime Pro Edition software version 25.1 from the FPGA Software Download Center webpage of the Intel website. Follow the on-screen instructions to complete the installation process. Choose an installation directory that is relative to the Quartus® Prime Pro Edition software installation directory.
+ - Download the Quartus® Prime Pro Edition software version 25.1.1 from the FPGA Software Download Center webpage of the Intel website. Follow the on-screen instructions to complete the installation process. Choose an installation directory that is relative to the Quartus® Prime Pro Edition software installation directory.
  - Set up the Quartus tools in the PATH, so they are accessible without full path.
 ```console
-export QUARTUS_ROOTDIR=~/intelFPGA_pro/25.1/quartus/
+export QUARTUS_ROOTDIR=~/intelFPGA_pro/25.1.1/quartus/
 export PATH=$QUARTUS_ROOTDIR/bin:$QUARTUS_ROOTDIR/linux64:$QUARTUS_ROOTDIR/../qsys/bin:$PATH
 ```
 
@@ -103,9 +103,6 @@ niosv-app -b=sw/tflite_bsp -a=sw/tflite_app -S=sw/tflite_app/image_classificatio
 cmake -S sw/tflite_app -B sw/tflite_app/build/Release -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
 make -C sw/tflite_app/build/Release
 ```
-Note:The software can be compiled using the Ashling Visual Studio Code Extension for Altera FPGAs
-
-For information on the build process, please refer to the following document- [Ashling VSCode Extension](https://www.intel.com/content/www/us/en/docs/programmable/730783/current/ashling-visual-studio-code-extension.html)
 
 ### Programing 
 Note: Reduce the JTAG clock frequency to 6MHz using the following command, before programming the sof file

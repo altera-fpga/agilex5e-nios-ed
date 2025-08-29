@@ -1,36 +1,38 @@
-# Agilex 5 FPGA - Nios V/c Helloworld OCM Memory test Design
+# Nios® V/c Hello World and OCM test Design
 
-Nios® V/c Processor-based Helloworld and OCM memory test example design
+ Nios® V/c Processor-based Helloworld example design on the Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1
 
 ## Description
 
-This design prints a simple Hello World message and performs a simple OCM memory test for the Agilex™ 5 FPGA E-Series 065B Premium Development Kit.
+ Nios® V/c Processor-based Helloworld example design on the Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1
 
-![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_c/niosv_c_helloworld_ocm_mem_test/img/hello_world_ocm.png)
+![image](https://github.com/altera-fpga/niosv-ed/blob/rel/25.1.1/niosv_c/niosv_c_helloworld_ocm_mem_test/img/hello_world_ocm.png)
+
 
 ## Project Details
 
-- **Title**: Agilex 5 FPGA- Nios V/c Helloworld OCM Memory test Design
+- **Title**: Nios® V/c Helloworld OCM Memory Test Design
 - **Source**: Github
 - **Design Support**: SCTH
 - **Family**: Agilex 5
-- **Quartus Version**: 25.1.0
+- **Quartus Version**: 25.1.1
 - **Development Kit**: Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1
 - **Device Part**: A5ED065BB32AE6SR0
 - **Design Package**: agilex5_niosv_c_helloworld_ocm_mem_test.zip
-- **Category**: Helloworld
-- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_c/niosv_c_helloworld_ocm_mem_test
-- **downloadURL**:https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.0-v1.0/agilex5_niosv_c_helloworld_ocm_mem_test.zip
+- **Category**: Memory
+- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.1/niosv_c/niosv_c_helloworld_ocm_mem_test
+- **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.1-v1.0/agilex5_niosv_c_helloworld_ocm_mem_test.zip
 
 ## Documentation
 
 - **Title**: Design Document
-- **URL**:  https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.0/niosv_c/niosv_c_helloworld_ocm_mem_test/docs/Nios_Vc_Processor_Helloworld_OCM_Memory_Test_Design_on_Agilex_5_FPGA.md
+- **URL**:https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.1/niosv_m/niosv_m_dma_ocm/docs/Nios_Vc_Processor_Helloworld_OCM_Memory_Test_Design_on_Agilex_5_FPGA.md
 
-# Getting Started
+## Build and Run Flow
 
 Vendor: Altera
 
+Devkit Product Page: https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-premium.html
 
 1. Directory structure
 2. Using existing files (sof and elf) to run on hardware
@@ -55,6 +57,7 @@ The directory structure is explained below:
 - sw - This folder contains software application files
 
 - scripts - This folder consists of scripts to build the design
+
 
 ### 2. Using existing files to run the design on hardware
 
@@ -88,11 +91,8 @@ niosv-app --bsp-dir=sw/bsp --app-dir=sw/app --srcs=sw/app/main.c
 niosv-shell
 cmake -S ./sw/app -B sw/app/build -G "Unix Makefiles"
 make -C sw/app/build
-elf2hex sw/app/build/app.elf -b 0x0 -w 32 -e 0xfffff sw/app/build/onchip_mem.hex -r4
+elf2hex sw/app/build/app.elf -b 0x0 -w 32 -e 0x9ffff sw/app/build/onchip_mem.hex -r4
 ```
-Note:The software can be compiled using the Ashling Visual Studio Code Extension for Altera FPGAs
-
-For information on the build process, please refer to the following document- [Ashling VSCode Extension](https://www.intel.com/content/www/us/en/docs/programmable/730783/current/ashling-visual-studio-code-extension.html)
 
 d. Hardware Validation
 - Program the generated sof file on the board

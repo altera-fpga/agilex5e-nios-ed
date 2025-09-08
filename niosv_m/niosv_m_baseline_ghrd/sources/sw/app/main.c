@@ -65,18 +65,27 @@ int pio_test()
 {
     int count = 0;
     int i;
+    int iter = 0;
     int pio_err = 0;
     printf("Application to toggle the PIOs- [4:0] \n");
 
-    while (count < 64)
+    // increase the below value while testing the leds on board
+    while (iter < 10000)
     {
+        if (count == 64)
+        {
+            count = 0;
+            IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE, 0xf);
+        }
         // Generate a test pattern to write to PIO
         i = count & 0xf;
         IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE, count & 0xf);
+        // IORD_ALTERA_AVALON_PIO_DATA(PIO_1_BASE);
         usleep(100);
         
         // Read back value from PIO
         printf("DATA READBACK FROM PIO_0_BASE is 0x%x \n", IORD_ALTERA_AVALON_PIO_DATA(PIO_0_BASE));
+        printf("DATA READBACK FROM PIO_1_BASE is 0x%x \n", IORD_ALTERA_AVALON_PIO_DATA(PIO_1_BASE));
 
         // Verify the read-back value matches expected pattern
         if (i != IORD_ALTERA_AVALON_PIO_DATA(PIO_0_BASE))
@@ -89,6 +98,7 @@ int pio_test()
             printf("DATA MATCHED - TEST PASSED \n");
         }
         count++;
+        iter++;
     }
     return pio_err;
 }

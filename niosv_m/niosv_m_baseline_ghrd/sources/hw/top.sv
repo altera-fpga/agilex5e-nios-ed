@@ -53,20 +53,23 @@ module top (
 	
     assign n_pll_lock = !pll_lock;
 
-    reg [3:0] pio_1_pb;
+    wire [3:0] pio_1_pb;
     
 	// Switch debounce logic
     pb_debounce pb_debounce_inst(
         .clk(pll_outclk_0),
         .pb_in(pio_1_external_connection_export),
         .pb_out(pio_1_pb)
-    );
-	
+	 );
 
+	 wire [3:0] qsys_led_output;
+	 assign pio_0_external_connection_export = qsys_led_output & pio_1_pb;
+
+	
     qsys_top u0 (
         .clk_clk(pll_outclk_0),     //   input,  width = 1,   clk.clk
-        .pio_0_external_connection_export (pio_0_external_connection_export), // Connect to LEDs
-        .pio_1_external_connection_export (pio_1_pb),  // Connect to Push Button
+        .pio_0_external_connection_export (qsys_led_output), // Connect to LED
+        .pio_1_external_connection_export (pio_1_pb),  // Comment it if lED assigned
         .reset_controller_0_reset_in0_reset(n_pll_lock)
 	);
 

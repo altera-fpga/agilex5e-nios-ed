@@ -25,7 +25,7 @@ The objective of the design is to accomplish data transfer between the processor
 ## Documentation
 
 - **Title**: Design Document
-- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_m/niosv_m_full_feature_ghrd/docs/NiosV_m_Processor_full_feature_ghrd_on_Agilex_5_FPGA.md
+**URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_m/niosv_m_full_feature_ghrd/docs/NiosV_m_Processor_full_feature_ghrd_on_Agilex_5_FPGA.md
 
 # Getting Started
 

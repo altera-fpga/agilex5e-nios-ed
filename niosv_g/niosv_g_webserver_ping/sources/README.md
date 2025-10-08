@@ -31,7 +31,8 @@ Observe the Ping Request and Response prints on the terminal.
 
 ## Documentation
 
-- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_g/niosv_g_webserver_ping/docs/NiosV_g_Processor_ping_on_Agilex_5_FPGA.md
+- **Title**: Design Document 
+**URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_g/niosv_g_webserver_ping/docs/NiosV_g_Processor_ping_on_Agilex_5_FPGA.md
 
 
 # Getting Started

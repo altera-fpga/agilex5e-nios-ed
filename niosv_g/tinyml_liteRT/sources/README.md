@@ -6,7 +6,7 @@ Nios® V/g Processor-based TinyML LiteRT example design on the Agilex® 5 FPGA.
 
 This design demonstrates the TinyML application using LiteRT for microcontrollers software with Nios® V/g processor in the Agilex™ 5 FPGA E-Series 065B Premium Development Kit (ES1) DK-A5E065BB32AES1. 
 
-![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.1/niosv_g/tinyml_liteRT/img/block_diagram.png)
+![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_g/tinyml_liteRT/img/block_diagram.png)
 
 ## Project Details
 
@@ -14,18 +14,18 @@ This design demonstrates the TinyML application using LiteRT for microcontroller
 * **Source**: Github
 * **Design Support**: CTH
 * **Family**: Agilex 5
-* **Quartus Version**: 25.1.1
+* **Quartus Version**: 25.3.0
 * **Development Kit**: Agilex 5 FPGA E*Series 065B Premium Development Kit DK*A5E065BB32AES1
 * **Device Part**: A5ED065BB32AE6SR0
 * **Design Package**: agilex5_niosv_g_tinyml_liteRT.zip
 * **Category**: Machine Learning
-* **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.1/niosv_g/tinyml_liteRT
-* **downloadURL**:https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.1-v1.0/agilex5_niosv_g_tinyml_liteRT.zip
+* **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.3.0/niosv_g/tinyml_liteRT
+* **downloadURL**:https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.3.0-v1.0/agilex5_niosv_g_tinyml_liteRT.zip
 
 ## Documentation
 
 * **Title**: Design Document 
-* **URL**:   https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.1.1/niosv_g/tinyml_liteRT/img/block_diagram.png
+* **URL**:   https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_g/tinyml_liteRT/img/block_diagram.png
 
 # Getting Started
 

@@ -13,7 +13,7 @@
 ### Release Contents  
 
 #### Binaries
- - Prebuilt binaries are located [here](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3/niosv_m/niosv_m_full_feature_ghrd/ready_to_test).
+ - Prebuilt binaries are located [here](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_m/niosv_m_full_feature_ghrd/ready_to_test).
  - The sof and elf files required to run the design can be found in "ready_to_test" folder 
  - Program the sof and download the elf file on board
 
@@ -21,7 +21,7 @@
 This example design includes a Nios® V/m processor connected to various on-board peripherals.
 The objective of the design is to accomplish data transfer between the processor and soft IP peripherals. Each peripheral has a dedicated application which demonstrates it's basic use.
  
- ![Block Diagram](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3/niosv_m/niosv_m_full_feature_ghrd/img/full_feature_ghrd_block_design.png)
+ ![Block Diagram](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_m/niosv_m_full_feature_ghrd/img/full_feature_ghrd_block_design.png)
 
 #### Nios® V/m Processor
 - Microcontroller- Balanced (For interrupt driven baremetal and RTOS code)
@@ -59,7 +59,7 @@ Refer to [Agilex™ 5 FPGA Premium Development Kit User Guide](https://www.intel
 
 #### Nios V Address Map
 
-![Address Map](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3/niosv_m/niosv_m_full_feature_ghrd/img/address_map.png)
+![Address Map](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_m/niosv_m_full_feature_ghrd/img/address_map.png)
 
 
 ### User Flow 

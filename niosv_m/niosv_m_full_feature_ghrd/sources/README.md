@@ -6,7 +6,7 @@
 This example design includes a Nios® V/m processor connected to various on-board peripherals.
 The objective of the design is to accomplish data transfer between the processor and soft IP peripherals. Each peripheral has a dedicated application which demonstrates it's basic use.
  
- ![Block Diagram](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3/niosv_m/niosv_m_full_feature_ghrd/img/full_feature_ghrd_block_design.png)
+ ![Block Diagram](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_m/niosv_m_full_feature_ghrd/img/full_feature_ghrd_block_design.png)
 
 ## Project Details
 
@@ -14,18 +14,18 @@ The objective of the design is to accomplish data transfer between the processor
 - **Source**: Github
 - **Design Support**: CTH
 - **Family**: Agilex 5
-- **Quartus Version**: 25.3
+- **Quartus Version**: 25.3.0
 - **Development Kit**: Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1
 - **Device Part**: A5ED065BB32AE6SR0
 - **Design Package**: agilex5_niosv_m_full_feature_ghrd.zip
 - **Category**: GHRD
-- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.3/niosv_m/niosv_m_full_feature_ghrd
+- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.3.0/niosv_m/niosv_m_full_feature_ghrd
 - **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.1-v1.0/agilex5_niosv_m_full_feature_ghrd.zip
 
 ## Documentation
 
 - **Title**: Design Document
-- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3/niosv_m/niosv_m_full_feature_ghrd/docs/NiosV_m_Processor_full_feature_ghrd_on_Agilex_5_FPGA.md
+- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_m/niosv_m_full_feature_ghrd/docs/NiosV_m_Processor_full_feature_ghrd_on_Agilex_5_FPGA.md
 
 # Getting Started
 

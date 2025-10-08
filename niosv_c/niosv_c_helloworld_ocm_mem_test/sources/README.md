@@ -6,7 +6,7 @@
 
  Nios® V/c Processor-based Helloworld example design on the Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1
 
-![image](https://github.com/altera-fpga/niosv-ed/blob/rel/25.3/niosv_c/niosv_c_helloworld_ocm_mem_test/img/hello_world_ocm.png)
+![image](https://github.com/altera-fpga/niosv-ed/blob/rel/25.3.0/niosv_c/niosv_c_helloworld_ocm_mem_test/img/hello_world_ocm.png)
 
 
 ## Project Details
@@ -20,13 +20,13 @@
 - **Device Part**: A5ED065BB32AE6SR0
 - **Design Package**: agilex5_niosv_c_helloworld_ocm_mem_test.zip
 - **Category**: Memory
-- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.3/niosv_c/niosv_c_helloworld_ocm_mem_test
-- **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.1-v1.0/agilex5_niosv_c_helloworld_ocm_mem_test.zip
+- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.3.0/niosv_c/niosv_c_helloworld_ocm_mem_test
+- **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.3.0-v1.0/agilex5_niosv_c_helloworld_ocm_mem_test.zip
 
 ## Documentation
 
 - **Title**: Design Document
-- **URL**:https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.1.1/niosv_m/niosv_m_dma_ocm/docs/Nios_Vc_Processor_Helloworld_OCM_Memory_Test_Design_on_Agilex_5_FPGA.md
+- **URL**:https://github.com/altera-fpga/agilex5e-nios-ed/tree/rel/25.3.0/niosv_m/niosv_m_dma_ocm/docs/Nios_Vc_Processor_Helloworld_OCM_Memory_Test_Design_on_Agilex_5_FPGA.md
 
 ## Build and Run Flow
 

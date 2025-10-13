@@ -6,7 +6,7 @@
 
  Nios® V/c Processor-based Helloworld example design on the Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1
 
-![image](https://github.com/altera-fpga/niosv-ed/blob/rel/25.3.0/niosv_c/niosv_c_helloworld_ocm_mem_test/img/hello_world_ocm.png)
+![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_c/niosv_c_helloworld_ocm_mem_test/img/hello_world_ocm.png)
 
 
 ## Project Details

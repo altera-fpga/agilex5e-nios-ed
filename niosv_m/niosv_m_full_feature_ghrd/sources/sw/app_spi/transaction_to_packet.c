@@ -19,11 +19,9 @@
 #define HEADER_LEN 8
 #define RESPONSE_LEN 4
 
+// Define to use static memory
 // ----------------------------------------
-// Define to use static or dynamic memory 
-// ----------------------------------------
-#define DYNAMIC_MEMORY_ALLOC
-//#define STATIC_MEMORY_ALLOC
+#define STATIC_MEMORY_ALLOC
 
 #ifdef STATIC_MEMORY_ALLOC	/* Buffer size allocated is sufficient for up to 1K data transaction only */
 #define TRANSACTION_BUFFER_LENGTH		1032	/* 1K data + Header length 8 */

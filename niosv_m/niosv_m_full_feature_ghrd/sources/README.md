@@ -70,6 +70,7 @@ a. Required directory structure
 
 b. Using build_sof.py to compile the design
 - Invoke the quartus_py shell in the terminal
+- Copy the contents from the custom_logic folder to the hw folder
 
 - Run the following command in the terminal from top level project directory:
 ```

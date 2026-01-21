@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2025.10.22.04:04:40"
+ outputDirectory="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/reset_release/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex 5"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="A5ED065BB32AE6SR0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_BOARD"
+     type="String"
+     defaultValue="Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="ninit_done" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="ninit_done" direction="output" role="ninit_done" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="reset_release" version="1.0" name="reset_release">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="A5ED065BB32AE6SR0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex 5" />
+  <parameter
+     name="AUTO_BOARD"
+     value="Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/reset_release/synth/reset_release.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/reset_release/synth/reset_release.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/reset_release.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/pgm/altera_s10_user_rst_clkgate/altera_s10_user_rst_clkgate_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="reset_release">"Generating: reset_release"</message>
+   <message level="Info" culprit="reset_release">"Generating: altera_s10_user_rst_clkgate"</message>
+   <message level="Info" culprit="s10_user_rst_clkgate_0">generating top-level entity altera_s10_user_rst_clkgate</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_s10_user_rst_clkgate"
+   version="19.4.9"
+   name="altera_s10_user_rst_clkgate">
+  <parameter name="DEVICE_FAMILY" value="Agilex 5" />
+  <parameter name="outputType" value="Conduit Interface" />
+  <generatedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/reset_release/altera_s10_user_rst_clkgate_1949/synth/altera_s10_user_rst_clkgate.sv"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/reset_release/altera_s10_user_rst_clkgate_1949/synth/altera_s10_user_rst_clkgate_fm.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/reset_release/altera_s10_user_rst_clkgate_1949/synth/altera_s10_user_rst_clkgate.sv"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/reset_release/altera_s10_user_rst_clkgate_1949/synth/altera_s10_user_rst_clkgate_fm.sdc"
+       attributes="NO_AUTO_INSTANCE_DISCOVERY NO_SDC_PROMOTION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/pgm/altera_s10_user_rst_clkgate/altera_s10_user_rst_clkgate_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="reset_release" as="s10_user_rst_clkgate_0" />
+  <messages>
+   <message level="Info" culprit="reset_release">"Generating: altera_s10_user_rst_clkgate"</message>
+   <message level="Info" culprit="s10_user_rst_clkgate_0">generating top-level entity altera_s10_user_rst_clkgate</message>
+  </messages>
+ </entity>
+</deploy>

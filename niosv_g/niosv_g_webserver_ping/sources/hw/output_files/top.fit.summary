@@ -1,0 +1,20 @@
+Fitter Status : Successful - Tue Oct 28 04:30:55 2025
+Quartus Prime Version : 25.3.0 Build 109 09/24/2025 SC Pro Edition
+Revision Name : top
+Top-level Entity Name : top
+Family : Agilex 5
+Device : A5ED065BB32AE6SR0
+Timing Models : Preliminary
+Power Models : Preliminary
+Device Status : Preliminary
+Logic utilization (in ALMs) : 10,925 / 222,400 ( 5 % )
+Total dedicated logic registers : 13419
+Total pins : 21 / 624 ( 3 % )
+Total block memory bits : 16,949,024 / 32,993,280 ( 51 % )
+Total RAM Blocks : 1,052 / 1,611 ( 65 % )
+Total DSP Blocks : 2 / 846 ( < 1 % )
+Total GTS Transceiver Channels : 0 / 24 ( 0 % )
+Total HSSI Ethernet Channels : 0 / 6 ( 0 % )
+Total HSSI PCIEs : 0 / 6 ( 0 % )
+Total HSSI HPS : 0 / 1 ( 0 % )
+Total PLLs : 1 / 15 ( 7 % )

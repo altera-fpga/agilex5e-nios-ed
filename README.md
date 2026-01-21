@@ -24,8 +24,6 @@ There are three variants of the NiosV core:
     
     b. Nios V/g core - General-Purpose Processor- High Performance (For interrupt driven baremetal and RTOS code)
 
-    c. Nios V/c core - Compact Microcontroller- Smallest (For non-interrupt driven baremetal code)
-
 
 # 1. a5e065b-prem-devkit   
 Example Designs using Nios V as the core based on Agilex™ 5 FPGA E-Series 065B Premium Development Kit
@@ -38,5 +36,4 @@ The following table contains the list of the designs on Agilex 5 FPGA E-Series 0
 | - | --- | ------ | ----------- |
 | 1 | Nios V/g | Nios V/g Webserver Ping Design | This design demonstrates the Ping application using the Triple Speed Ethernet IP <br>[Design details](niosv_g/niosv_g_webserver_ping/docs/Nios_Vg_Processor_Webserver_Ping_Design_on_Agilex_5_FPGA.md) |
 | 2 | Nios V/g | Nios V/g TinyML LiteRT | This design demonstrates the TinyML application using LiteRT for microcontrollers software with Nios® V/g processor<br>[Design details](niosv_g/tinyml_liteRT/docs/Nios_Vg_Processor_TinyML_Design_on_Agilex_5_FPGA.md) |
-| 3 | Nios V/c | Nios V/c Helloworld OCM Memory test Design | Nios® V/c Processor-based Helloworld and OCM memory test example design<br>[Design details](niosv_c/niosv_c_helloworld_ocm_mem_test/docs/Nios_Vc_Processor_Helloworld_OCM_Memory_Test_Design_on_Agilex_5_FPGA.md) |
-| 4 | Nios V/m | Nios V/m Full Feature Golden Hardware Reference Design (GHRD) | This design demonstrates the Full Feature Golden Hardware Reference Design (GHRD) that showcases the connectivity to multiple peripherals required for application execution <br>[Design details](niosv_m/niosv_m_full_feature_ghrd/docs/NiosV_m_Processor_full_feature_ghrd_on_Agilex_5_FPGA.md)|
+| 3 | Nios V/m | Nios V/m Full Feature Golden Hardware Reference Design (GHRD) | This design demonstrates the Full Feature Golden Hardware Reference Design (GHRD) that showcases the connectivity to multiple peripherals required for application execution <br>[Design details](niosv_m/niosv_m_full_feature_ghrd/docs/NiosV_m_Processor_full_feature_ghrd_on_Agilex_5_FPGA.md)|

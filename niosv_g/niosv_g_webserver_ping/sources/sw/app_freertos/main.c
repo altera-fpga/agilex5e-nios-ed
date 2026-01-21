@@ -75,10 +75,10 @@ void generate_random_mac(uint8_t * mac_address)
 
 void vPingTestTask(void *pvParameters)
 {
-    const uint8_t ucIPAddressToPing[4] = { 192, 168, 1, 50 };
+    const uint8_t ucIPAddressToPing[4] = { 10, 0, 0, 1 };
     uint32_t ucIPAddress;
 
-    if(!FreeRTOS_inet_pton(FREERTOS_AF_INET, "192.168.1.50", &ucIPAddress))
+    if(!FreeRTOS_inet_pton(FREERTOS_AF_INET, "10.0.0.1", &ucIPAddress))
         printf("IP address conversion failure\n");
 
     const TickType_t xDelayBetweenPings = pdMS_TO_TICKS(1000);
@@ -191,9 +191,9 @@ void vApplicationIPNetworkEventHook( eIPCallbackEvent_t eNetworkEvent )
 
 BaseType_t vInitialiseNetworkInterface()
 {
-    const uint8_t ucIPAddress[ 4 ]  = { 192, 168, 1, 40 };
+    const uint8_t ucIPAddress[ 4 ]  = { 10, 0, 0, 2 };
     const uint8_t ucNetMask[ 4 ]    = { 255, 255, 255, 0 };
-    const uint8_t ucGateway[ 4 ]    = { 192, 168, 1, 1 };
+    const uint8_t ucGateway[ 4 ]    = { 10, 0, 0, 2 };
     const uint8_t ucDNSServer[ 4 ]  = { 8, 8, 8, 8 };
     uint8_t ucMACAddress[ 6 ];
     

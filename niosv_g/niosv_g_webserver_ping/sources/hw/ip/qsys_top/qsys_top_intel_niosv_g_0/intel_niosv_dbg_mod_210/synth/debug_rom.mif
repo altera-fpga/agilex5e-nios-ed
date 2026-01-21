@@ -1,0 +1,50 @@
+DEPTH = 42;
+WIDTH = 32;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT BEGIN
+
+00:00c0006f; -- jal x0,12
+01:0700006f; -- jal x0,112
+02:0400006f; -- jal x0,64
+03:00000013; -- nop
+04:7b239073; -- csrrw x0,dscratch0,x7
+05:7b351073; -- csrrw x0,dscratch1,x10
+06:00000517; -- auipc x10,0
+07:00c55513; -- srli x10,x10,12
+08:00c51513; -- slli x10,x10,12
+09:f14023f3; -- csrrs x7,mhartid,x0
+0A:12752023; -- sw x7,288(x10)
+0B:12c52383; -- lw x7,300(x10)
+0C:0013d393; -- srli x7,x7,1
+0D:00039463; -- bne x7,x0,8
+0E:0600006f; -- jal x0,96
+0F:0013d393; -- xrli x7,x7,1
+10:fc0382e3; -- beq x7,x0,-60
+11:fe1ff06f; -- jal x0,-32
+12:34051073; -- csrrw x0,mscratch,x10
+13:00000517; -- auipc x10,0
+14:00c55513; -- srli x10,x10,12
+15:00c51513; -- slli x10,x10,12
+16:10052623; -- sw x0,268(x10)
+17:34002573; -- csrrs x10,mscratch,x0
+18:00100073; -- ebreak
+19:10052223; -- sw x0,260(x10)
+1A:7b2023f3; -- csrrs x7,dscratch0,x0
+1B:7b302573; -- csrrs x10,dscratch1,x0
+1C:a908006f; -- jal x0,-523632
+1D:f14023f3; -- csrrs x7,mhartid,x0
+1E:12752223; -- sw x7,292(x10)
+1F:7b2023f3; -- csrrs x7,dscratch0,x0
+20:7b302573; -- csrrs x10,dscratch1,x0
+21:7b200073; -- dret
+22:00700393; -- addi x7,x0,7
+23:7b039073; -- csrrw x0,dcsr,x7
+24:7b2023f3; -- csrrs x7,dscratch0,x0
+25:00300393; -- addi x7,x0,3
+26:7b039073; -- csrrw x0,dcsr,x7
+27:7b2023f3; -- csrrs x7,dscratch0,x0
+28:00000013; -- nop
+29:00000013; -- nop
+
+END;

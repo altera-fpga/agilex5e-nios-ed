@@ -13,7 +13,7 @@ Once the application binaries are downloaded (See section 3.d below for the step
 Observe the Ping Request and Response prints on the terminal.
 
 
-![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_g/niosv_g_webserver_ping/img/web_server_block_diagram.png)
+![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.1/niosv_g/niosv_g_webserver_ping/img/web_server_block_diagram.png)
 
 ## Project Details
 
@@ -21,18 +21,18 @@ Observe the Ping Request and Response prints on the terminal.
 - **Source**: Github
 - **Design Support**: CTH
 - **Family**: Agilex 5
-- **Quartus Version**: 25.3.0
+- **Quartus Version**: 25.3.1
 - **Development Kit**: Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1
 - **Device Part**: A5ED065BB32AE6SR0
 - **Design Package**: agilex5_niosv_g_webserver_ping.zip
-- **Category**: Web Server
-- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_g/niosv_g_webserver_ping
-- **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.3.0-v1.0/agilex5_niosv_g_webserver_ping.zip
+- **Category**: Networking
+- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.1/niosv_g/niosv_g_webserver_ping
+- **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.3.1-v1.0/agilex5_niosv_g_webserver_ping.zip
 
 ## Documentation
 
 - **Title**: Design Document 
-**URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_g/niosv_g_webserver_ping/docs/NiosV_g_Processor_ping_on_Agilex_5_FPGA.md
+**URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.1/niosv_g/niosv_g_webserver_ping/docs/NiosV_g_Processor_ping_on_Agilex_5_FPGA.md
 
 
 # Getting Started

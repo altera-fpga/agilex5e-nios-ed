@@ -1,0 +1,33 @@
+IP Generation Report
+Wed Oct 22 04:21:46 2025
+Quartus Prime Version 25.3.0 Build 109 09/24/2025 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Settings
+  2. Generation Stages
+
+
+
++-----------------------------------------------+
+; Settings                                      ;
++------------------------+----------------------+
+; Option                 ; Setting              ;
++------------------------+----------------------+
+; IP Regeneration Policy ; Never Regenerate IPs ;
+; Generation Skipped     ; Yes                  ;
++------------------------+----------------------+
+
+
++------------------------------------+
+; Generation Stages                  ;
++-----------------+------------------+
+; Stage           ; Elapsed Time (s) ;
++-----------------+------------------+
+; Qsys Validation ; 0.0              ;
+; Qsys Generation ; 0                ;
++-----------------+------------------+
+
+

@@ -1,0 +1,14 @@
+	component qsys_top_intel_onchip_memory_1 is
+		port (
+			clk        : in  std_logic                     := 'X';             -- clk
+			address    : in  std_logic_vector(18 downto 0) := (others => 'X'); -- address
+			read       : in  std_logic                     := 'X';             -- read
+			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
+			byteenable : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- byteenable
+			write      : in  std_logic                     := 'X';             -- write
+			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			reset      : in  std_logic                     := 'X';             -- reset
+			reset_req  : in  std_logic                     := 'X'              -- reset_req
+		);
+	end component qsys_top_intel_onchip_memory_1;
+

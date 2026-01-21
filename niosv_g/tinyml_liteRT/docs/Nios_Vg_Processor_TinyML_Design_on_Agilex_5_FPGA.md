@@ -12,14 +12,14 @@ This design demonstrates the TinyML application using LiteRT for microcontroller
 ### Release Contents  
 
 #### Binaries
- - Prebuilt binaries are located [here](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_g/tinyml_liteRT/ready_to_test).
+ - Prebuilt binaries are located [here](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.1/niosv_g/tinyml_liteRT/ready_to_test).
  - The sof and elf files required to run the design can be found in "ready_to_test" folder 
  - Program the sof and download the elf file on board
 
 ### Nios® V/g TinyML LiteRT Design Architecture
  This example design includes a Nios® V processor connected to the On Chip RAM-II, JTAG UART IP and System ID peripheral core. The objective of the design is to accomplish data transfer between the processor and soft IP peripherals.
  
- ![Block Diagram](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.0/niosv_g/tinyml_liteRT/img/block_diagram.png)
+ ![Block Diagram](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.1/niosv_g/tinyml_liteRT/img/block_diagram.png)
 
 #### Nios® V/g Processor 
 - Balanced (For interrupt driven baremetal and RTOS code)
@@ -76,10 +76,10 @@ This design demonstrates the TinyML application using LiteRT for microcontroller
 #### Tools Download and Installation
 1. Quartus Prime Pro
 
- - Download the Quartus® Prime Pro Edition software version 25.3.0 from the FPGA Software Download Center webpage of the Intel website. Follow the on-screen instructions to complete the installation process. Choose an installation directory that is relative to the Quartus® Prime Pro Edition software installation directory.
+ - Download the Quartus® Prime Pro Edition software version 25.3.1 from the FPGA Software Download Center webpage of the Intel website. Follow the on-screen instructions to complete the installation process. Choose an installation directory that is relative to the Quartus® Prime Pro Edition software installation directory.
  - Set up the Quartus tools in the PATH, so they are accessible without full path.
 ```console
-export QUARTUS_ROOTDIR=~/intelFPGA_pro/25.3.0/quartus/
+export QUARTUS_ROOTDIR=~/intelFPGA_pro/25.3.1/quartus/
 export PATH=$QUARTUS_ROOTDIR/bin:$QUARTUS_ROOTDIR/linux64:$QUARTUS_ROOTDIR/../qsys/bin:$PATH
 ```
 

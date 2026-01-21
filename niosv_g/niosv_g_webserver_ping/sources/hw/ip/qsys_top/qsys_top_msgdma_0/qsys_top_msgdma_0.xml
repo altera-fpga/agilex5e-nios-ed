@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2025.10.28.04:17:26"
+ outputDirectory="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex 5"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="A5ED065BB32AE6SR0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_BOARD"
+     type="String"
+     defaultValue="Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CSR_CPU_INFO_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DESCRIPTOR_READ_MASTER_ADDRESS_MAP"
+     type="AddressMap"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DESCRIPTOR_READ_MASTER_ADDRESS_WIDTH"
+     type="AddressWidthType"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DESCRIPTOR_WRITE_MASTER_ADDRESS_MAP"
+     type="AddressMap"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DESCRIPTOR_WRITE_MASTER_ADDRESS_WIDTH"
+     type="AddressWidthType"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_PREFETCHER_CSR_CPU_INFO_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_MM_READ_ADDRESS_MAP"
+     type="AddressMap"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_MM_READ_ADDRESS_WIDTH"
+     type="AddressWidthType"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clock" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clock_clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="reset_n" kind="reset" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="synchronousEdges" value="BOTH" />
+   <port name="reset_n_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+  <interface name="csr" kind="avalon" start="0">
+   <property name="addressAlignment" value="DYNAMIC" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="32" />
+   <property name="addressUnits" value="WORDS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset_n" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="false" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumReadLatency" value="1" />
+   <property name="minimumResponseLatency" value="1" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="prSafe" value="false" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="1" />
+   <property name="readWaitStates" value="1" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="waitrequestAllowance" value="0" />
+   <property name="waitrequestTimeout" value="1024" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="0" />
+   <property name="writeWaitTime" value="0" />
+   <property name="dfhFeatureGuid" value="0" />
+   <property name="dfhGroupId" value="0" />
+   <property name="dfhParameterId" value="" />
+   <property name="dfhParameterName" value="" />
+   <property name="dfhParameterVersion" value="" />
+   <property name="dfhParameterData" value="" />
+   <property name="dfhParameterDataLength" value="" />
+   <property name="dfhFeatureMajorVersion" value="0" />
+   <property name="dfhFeatureMinorVersion" value="0" />
+   <property name="dfhFeatureId" value="35" />
+   <property name="dfhFeatureType" value="3" />
+   <port name="csr_writedata" direction="input" role="writedata" width="32" />
+   <port name="csr_write" direction="input" role="write" width="1" />
+   <port name="csr_byteenable" direction="input" role="byteenable" width="4" />
+   <port name="csr_readdata" direction="output" role="readdata" width="32" />
+   <port name="csr_read" direction="input" role="read" width="1" />
+   <port name="csr_address" direction="input" role="address" width="3" />
+  </interface>
+  <interface name="descriptor_read_master" kind="avalon" start="1">
+   <property name="adaptsTo" value="" />
+   <property name="addressGroup" value="0" />
+   <property name="addressUnits" value="SYMBOLS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset_n" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="dBSBigEndian" value="false" />
+   <property name="doStreamReads" value="false" />
+   <property name="doStreamWrites" value="false" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isAsynchronous" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isReadable" value="false" />
+   <property name="isWriteable" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maxAddressWidth" value="32" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumReadLatency" value="1" />
+   <property name="minimumResponseLatency" value="1" />
+   <property name="prSafe" value="false" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="waitrequestAllowance" value="0" />
+   <property name="waitrequestTimeout" value="1024" />
+   <property name="writeWaitTime" value="0" />
+   <property name="enableConcurrentSubordinateAccess" value="0" />
+   <property name="optimizedReadsWithBE" value="0" />
+   <port
+       name="descriptor_read_master_address"
+       direction="output"
+       role="address"
+       width="32" />
+   <port
+       name="descriptor_read_master_read"
+       direction="output"
+       role="read"
+       width="1" />
+   <port
+       name="descriptor_read_master_readdata"
+       direction="input"
+       role="readdata"
+       width="32" />
+   <port
+       name="descriptor_read_master_waitrequest"
+       direction="input"
+       role="waitrequest"
+       width="1" />
+   <port
+       name="descriptor_read_master_readdatavalid"
+       direction="input"
+       role="readdatavalid"
+       width="1" />
+  </interface>
+  <interface name="descriptor_write_master" kind="avalon" start="1">
+   <property name="adaptsTo" value="" />
+   <property name="addressGroup" value="0" />
+   <property name="addressUnits" value="SYMBOLS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset_n" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="dBSBigEndian" value="false" />
+   <property name="doStreamReads" value="false" />
+   <property name="doStreamWrites" value="false" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isAsynchronous" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isReadable" value="false" />
+   <property name="isWriteable" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maxAddressWidth" value="32" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="3" />
+   <property name="minimumReadLatency" value="1" />
+   <property name="minimumResponseLatency" value="1" />
+   <property name="prSafe" value="false" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="waitrequestAllowance" value="0" />
+   <property name="waitrequestTimeout" value="1024" />
+   <property name="writeWaitTime" value="0" />
+   <property name="enableConcurrentSubordinateAccess" value="0" />
+   <property name="optimizedReadsWithBE" value="0" />
+   <port
+       name="descriptor_write_master_address"
+       direction="output"
+       role="address"
+       width="32" />
+   <port
+       name="descriptor_write_master_write"
+       direction="output"
+       role="write"
+       width="1" />
+   <port
+       name="descriptor_write_master_byteenable"
+       direction="output"
+       role="byteenable"
+       width="4" />
+   <port
+       name="descriptor_write_master_writedata"
+       direction="output"
+       role="writedata"
+       width="32" />
+   <port
+       name="descriptor_write_master_waitrequest"
+       direction="input"
+       role="waitrequest"
+       width="1" />
+   <port
+       name="descriptor_write_master_response"
+       direction="input"
+       role="response"
+       width="2" />
+   <port
+       name="descriptor_write_master_writeresponsevalid"
+       direction="input"
+       role="writeresponsevalid"
+       width="1" />
+  </interface>
+  <interface name="prefetcher_csr" kind="avalon" start="0">
+   <property name="addressAlignment" value="DYNAMIC" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="32" />
+   <property name="addressUnits" value="WORDS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset_n" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="false" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumReadLatency" value="1" />
+   <property name="minimumResponseLatency" value="1" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="prSafe" value="false" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="1" />
+   <property name="readWaitStates" value="0" />
+   <property name="readWaitTime" value="0" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="waitrequestAllowance" value="0" />
+   <property name="waitrequestTimeout" value="1024" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="0" />
+   <property name="writeWaitTime" value="0" />
+   <property name="dfhFeatureGuid" value="0" />
+   <property name="dfhGroupId" value="0" />
+   <property name="dfhParameterId" value="" />
+   <property name="dfhParameterName" value="" />
+   <property name="dfhParameterVersion" value="" />
+   <property name="dfhParameterData" value="" />
+   <property name="dfhParameterDataLength" value="" />
+   <property name="dfhFeatureMajorVersion" value="0" />
+   <property name="dfhFeatureMinorVersion" value="0" />
+   <property name="dfhFeatureId" value="35" />
+   <property name="dfhFeatureType" value="3" />
+   <port
+       name="prefetcher_csr_address"
+       direction="input"
+       role="address"
+       width="3" />
+   <port name="prefetcher_csr_read" direction="input" role="read" width="1" />
+   <port name="prefetcher_csr_write" direction="input" role="write" width="1" />
+   <port
+       name="prefetcher_csr_writedata"
+       direction="input"
+       role="writedata"
+       width="32" />
+   <port
+       name="prefetcher_csr_readdata"
+       direction="output"
+       role="readdata"
+       width="32" />
+  </interface>
+  <interface name="csr_irq" kind="interrupt" start="0">
+   <property
+       name="associatedAddressablePoint"
+       value="qsys_top_msgdma_0.prefetcher_csr" />
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset_n" />
+   <property name="bridgedReceiverOffset" value="0" />
+   <property name="bridgesToReceiver" value="" />
+   <property name="irqScheme" value="NONE" />
+   <port name="csr_irq_irq" direction="output" role="irq" width="1" />
+  </interface>
+  <interface name="mm_read" kind="avalon" start="1">
+   <property name="adaptsTo" value="" />
+   <property name="addressGroup" value="0" />
+   <property name="addressUnits" value="SYMBOLS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset_n" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="dBSBigEndian" value="false" />
+   <property name="doStreamReads" value="false" />
+   <property name="doStreamWrites" value="false" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isAsynchronous" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isReadable" value="false" />
+   <property name="isWriteable" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maxAddressWidth" value="32" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumReadLatency" value="1" />
+   <property name="minimumResponseLatency" value="1" />
+   <property name="prSafe" value="false" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="waitrequestAllowance" value="0" />
+   <property name="waitrequestTimeout" value="1024" />
+   <property name="writeWaitTime" value="0" />
+   <property name="enableConcurrentSubordinateAccess" value="0" />
+   <property name="optimizedReadsWithBE" value="0" />
+   <port name="mm_read_address" direction="output" role="address" width="32" />
+   <port name="mm_read_read" direction="output" role="read" width="1" />
+   <port
+       name="mm_read_byteenable"
+       direction="output"
+       role="byteenable"
+       width="4" />
+   <port name="mm_read_readdata" direction="input" role="readdata" width="32" />
+   <port
+       name="mm_read_waitrequest"
+       direction="input"
+       role="waitrequest"
+       width="1" />
+   <port
+       name="mm_read_readdatavalid"
+       direction="input"
+       role="readdatavalid"
+       width="1" />
+  </interface>
+  <interface name="st_source" kind="avalon_streaming" start="1">
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="reset_n" />
+   <property name="beatsPerCycle" value="1" />
+   <property name="dataBitsPerSymbol" value="8" />
+   <property name="emptyWithinPacket" value="false" />
+   <property name="errorDescriptor" value="" />
+   <property name="firstSymbolInHighOrderBits" value="true" />
+   <property name="highOrderSymbolAtMSB" value="false" />
+   <property name="maxChannel" value="0" />
+   <property name="packetDescription" value="" />
+   <property name="prSafe" value="false" />
+   <property name="readyAllowance" value="0" />
+   <property name="readyLatency" value="0" />
+   <property name="symbolsPerBeat" value="4" />
+   <port name="st_source_data" direction="output" role="data" width="32" />
+   <port name="st_source_valid" direction="output" role="valid" width="1" />
+   <port name="st_source_ready" direction="input" role="ready" width="1" />
+   <port
+       name="st_source_startofpacket"
+       direction="output"
+       role="startofpacket"
+       width="1" />
+   <port
+       name="st_source_endofpacket"
+       direction="output"
+       role="endofpacket"
+       width="1" />
+   <port name="st_source_empty" direction="output" role="empty" width="2" />
+   <port name="st_source_error" direction="output" role="error" width="1" />
+  </interface>
+ </perimeter>
+ <entity kind="qsys_top_msgdma_0" version="1.0" name="qsys_top_msgdma_0">
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex 5" />
+  <parameter
+     name="AUTO_BOARD"
+     value="Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1" />
+  <parameter name="AUTO_PREFETCHER_CSR_CPU_INFO_ID" value="" />
+  <parameter name="AUTO_DESCRIPTOR_READ_MASTER_ADDRESS_MAP" value="" />
+  <parameter name="AUTO_DESCRIPTOR_READ_MASTER_ADDRESS_WIDTH" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_CSR_CPU_INFO_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_MM_READ_ADDRESS_WIDTH" value="-1" />
+  <parameter name="AUTO_CLOCK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLOCK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_DEVICE" value="A5ED065BB32AE6SR0" />
+  <parameter name="AUTO_DESCRIPTOR_WRITE_MASTER_ADDRESS_MAP" value="" />
+  <parameter name="AUTO_MM_READ_ADDRESS_MAP" value="" />
+  <parameter name="AUTO_DESCRIPTOR_WRITE_MASTER_ADDRESS_WIDTH" value="-1" />
+  <generatedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/synth/qsys_top_msgdma_0.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/synth/qsys_top_msgdma_0.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/eip/altera_msgdma/top/altera_msgdma_hw.tcl" />
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/eip/altera_msgdma/dispatcher/dispatcher_hw.tcl" />
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/eip/altera_msgdma/prefetcher/altera_msgdma_prefetcher_hw.tcl" />
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/eip/altera_msgdma/read_master/read_master_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="qsys_top_msgdma_0">"Generating: qsys_top_msgdma_0"</message>
+   <message level="Info" culprit="qsys_top_msgdma_0">"Generating: qsys_top_msgdma_0_altera_msgdma_1932_k7ydxky"</message>
+   <message level="Info" culprit="qsys_top_msgdma_0">"Generating: dispatcher"</message>
+   <message level="Info" culprit="qsys_top_msgdma_0">"Generating: altera_msgdma_prefetcher"</message>
+   <message level="Info" culprit="qsys_top_msgdma_0">"Generating: read_master"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_msgdma"
+   version="19.3.2"
+   name="qsys_top_msgdma_0_altera_msgdma_1932_k7ydxky">
+  <parameter name="MAX_STRIDE" value="1" />
+  <parameter name="PACKET_ENABLE" value="1" />
+  <parameter name="ERROR_ENABLE" value="1" />
+  <parameter name="CHANNEL_ENABLE_DERIVED" value="0" />
+  <parameter
+     name="AUTO_BOARD"
+     value="Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1" />
+  <parameter name="MODE" value="1" />
+  <parameter name="NO_BYTEENABLES" value="0" />
+  <parameter name="STRIDE_ENABLE" value="0" />
+  <parameter
+     name="AUTO_DESCRIPTOR_READ_MASTER_ADDRESS_MAP"
+     value="&lt;address-map&gt;&lt;slave name=&apos;sys_cpu_ram.s1&apos; start=&apos;0x0&apos; end=&apos;0x1E8480&apos; datawidth=&apos;32&apos; /&gt;&lt;slave name=&apos;sys_desc_mem.s1&apos; start=&apos;0x210000&apos; end=&apos;0x212000&apos; datawidth=&apos;32&apos; /&gt;&lt;/address-map&gt;" />
+  <parameter name="RESPONSE_PORT" value="2" />
+  <parameter name="BURST_ENABLE" value="0" />
+  <parameter name="FIX_ADDRESS_WIDTH" value="32" />
+  <parameter name="AUTO_MM_READ_ADDRESS_WIDTH" value="5" />
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="PREFETCHER_READ_BURST_ENABLE" value="0" />
+  <parameter name="AUTO_MM_WRITE_ADDRESS_WIDTH" value="-1" />
+  <parameter name="ERROR_WIDTH" value="1" />
+  <parameter name="MAX_BYTE" value="262144" />
+  <parameter name="PREFETCHER_ENABLE" value="1" />
+  <parameter name="ERROR_ENABLE_DERIVED" value="1" />
+  <parameter name="PREFETCHER_MAX_READ_BURST_COUNT" value="2" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex 5" />
+  <parameter name="DATA_FIFO_DEPTH" value="2048" />
+  <parameter name="WRITE_RESPONSE_ENABLE" value="0" />
+  <parameter name="CHANNEL_WIDTH" value="8" />
+  <parameter name="AUTO_DESCRIPTOR_READ_MASTER_ADDRESS_WIDTH" value="5" />
+  <parameter name="USE_FIX_ADDRESS_WIDTH" value="0" />
+  <parameter name="DESCRIPTOR_FIFO_DEPTH" value="128" />
+  <parameter name="CHANNEL_ENABLE" value="0" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="ENHANCED_FEATURES" value="0" />
+  <parameter name="EXPOSE_ST_PORT" value="0" />
+  <parameter name="PACKET_ENABLE_DERIVED" value="1" />
+  <parameter name="PREFETCHER_DATA_WIDTH" value="32" />
+  <parameter name="BURST_WRAPPING_SUPPORT" value="0" />
+  <parameter name="AUTO_DEVICE" value="A5ED065BB32AE6SR0" />
+  <parameter
+     name="AUTO_MM_READ_ADDRESS_MAP"
+     value="&lt;address-map&gt;&lt;slave name=&apos;sys_cpu_ram.s1&apos; start=&apos;0x0&apos; end=&apos;0x1E8480&apos; datawidth=&apos;32&apos; /&gt;&lt;slave name=&apos;sys_desc_mem.s1&apos; start=&apos;0x210000&apos; end=&apos;0x212000&apos; datawidth=&apos;32&apos; /&gt;&lt;/address-map&gt;" />
+  <parameter
+     name="AUTO_DESCRIPTOR_WRITE_MASTER_ADDRESS_MAP"
+     value="&lt;address-map&gt;&lt;slave name=&apos;sys_cpu_ram.s1&apos; start=&apos;0x0&apos; end=&apos;0x1E8480&apos; datawidth=&apos;32&apos; /&gt;&lt;slave name=&apos;sys_desc_mem.s1&apos; start=&apos;0x210000&apos; end=&apos;0x212000&apos; datawidth=&apos;32&apos; /&gt;&lt;/address-map&gt;" />
+  <parameter name="TRANSFER_TYPE" value="Unaligned Accesses" />
+  <parameter name="SIDEBAND_ENABLE" value="0" />
+  <parameter name="PROGRAMMABLE_BURST_ENABLE" value="0" />
+  <parameter name="AUTO_DESCRIPTOR_WRITE_MASTER_ADDRESS_WIDTH" value="5" />
+  <parameter name="MAX_BURST_COUNT" value="2" />
+  <parameter name="STRIDE_ENABLE_DERIVED" value="0" />
+  <parameter name="AUTO_MM_WRITE_ADDRESS_MAP" value="" />
+  <generatedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_1932/synth/qsys_top_msgdma_0_altera_msgdma_1932_k7ydxky.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_1932/synth/qsys_top_msgdma_0_altera_msgdma_1932_k7ydxky.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/eip/altera_msgdma/top/altera_msgdma_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/eip/altera_msgdma/dispatcher/dispatcher_hw.tcl" />
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/eip/altera_msgdma/prefetcher/altera_msgdma_prefetcher_hw.tcl" />
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/eip/altera_msgdma/read_master/read_master_hw.tcl" />
+  </childSourceFiles>
+  <instantiator instantiator="qsys_top_msgdma_0" as="sys_tse_msgdma_tx" />
+  <messages>
+   <message level="Info" culprit="qsys_top_msgdma_0">"Generating: qsys_top_msgdma_0_altera_msgdma_1932_k7ydxky"</message>
+   <message level="Info" culprit="qsys_top_msgdma_0">"Generating: dispatcher"</message>
+   <message level="Info" culprit="qsys_top_msgdma_0">"Generating: altera_msgdma_prefetcher"</message>
+   <message level="Info" culprit="qsys_top_msgdma_0">"Generating: read_master"</message>
+  </messages>
+ </entity>
+ <entity kind="modular_sgdma_dispatcher" version="19.2.2" name="dispatcher">
+  <parameter name="GUI_RESPONSE_PORT" value="2" />
+  <parameter name="TRANSFER_TYPE_DERIVED" value="2" />
+  <parameter name="ERROR_WIDTH_DERIVED" value="0" />
+  <parameter name="MAX_STRIDE" value="1" />
+  <parameter name="PACKET_ENABLE" value="1" />
+  <parameter name="ERROR_ENABLE" value="1" />
+  <parameter name="DEVICE_FAMILY" value="Agilex 5" />
+  <parameter name="MODE" value="1" />
+  <parameter name="STRIDE_ENABLE" value="0" />
+  <parameter name="DESCRIPTOR_WIDTH" value="128" />
+  <parameter name="MAX_BYTE_DERIVED" value="8" />
+  <parameter name="RESPONSE_PORT" value="1" />
+  <parameter name="BURST_ENABLE" value="0" />
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="MAX_STRIDE_DERIVED" value="0" />
+  <parameter name="ERROR_WIDTH" value="1" />
+  <parameter name="MAX_BYTE" value="262144" />
+  <parameter name="DATA_FIFO_DEPTH_DERIVED" value="7" />
+  <parameter name="DESCRIPTOR_FIFO_DEPTH_DERIVED" value="4" />
+  <parameter name="CHANNEL_WIDTH_DERIVED" value="7" />
+  <parameter name="PREFETCHER_USE_CASE" value="1" />
+  <parameter name="DATA_FIFO_DEPTH" value="2048" />
+  <parameter name="DESCRIPTOR_INTERFACE" value="1" />
+  <parameter name="DATA_WIDTH_DERIVED" value="2" />
+  <parameter name="CHANNEL_WIDTH" value="8" />
+  <parameter name="DESCRIPTOR_FIFO_DEPTH" value="128" />
+  <parameter name="CHANNEL_ENABLE" value="0" />
+  <parameter name="MAX_BURST_COUNT_DERIVED" value="0" />
+  <parameter name="ENHANCED_FEATURES" value="0" />
+  <parameter name="CSR_ADDRESS_WIDTH" value="3" />
+  <parameter name="BURST_WRAPPING_SUPPORT" value="0" />
+  <parameter name="DESCRIPTOR_BYTEENABLE_WIDTH" value="16" />
+  <parameter name="TRANSFER_TYPE" value="Unaligned Accesses" />
+  <parameter name="SIDEBAND_ENABLE" value="0" />
+  <parameter name="PROGRAMMABLE_BURST_ENABLE" value="0" />
+  <parameter name="MAX_BURST_COUNT" value="2" />
+  <parameter name="STRIDE_ENABLE_DERIVED" value="0" />
+  <generatedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/dispatcher.v"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/descriptor_buffers.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/csr_block.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/response_block.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/fifo_with_byteenables.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/read_signal_breakout.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/write_signal_breakout.v"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/dispatcher.v"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/descriptor_buffers.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/csr_block.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/response_block.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/fifo_with_byteenables.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/read_signal_breakout.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/modular_sgdma_dispatcher_1922/synth/write_signal_breakout.v"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/eip/altera_msgdma/dispatcher/dispatcher_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="qsys_top_msgdma_0_altera_msgdma_1932_k7ydxky"
+     as="dispatcher_internal" />
+  <messages>
+   <message level="Info" culprit="qsys_top_msgdma_0">"Generating: dispatcher"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_msgdma_prefetcher"
+   version="19.3.2"
+   name="altera_msgdma_prefetcher">
+  <parameter name="ENABLE_READ_BURST" value="0" />
+  <parameter name="AUTO_ADDRESS_WIDTH" value="32" />
+  <parameter name="GUI_DESCRIPTOR_FIFO_DEPTH" value="128" />
+  <parameter name="DEVICE_FAMILY" value="Agilex 5" />
+  <parameter name="MAX_READ_BURST_COUNT_WIDTH" value="1" />
+  <parameter name="DESCRIPTOR_WIDTH" value="128" />
+  <parameter name="MAX_READ_BURST_COUNT" value="1" />
+  <parameter name="ENHANCED_FEATURES" value="0" />
+  <parameter name="FIX_ADDRESS_WIDTH" value="32" />
+  <parameter name="GUI_MAX_READ_BURST_COUNT" value="2" />
+  <parameter name="DATA_WIDTH" value="32" />
+  <parameter name="SIDEBAND_ENABLE" value="0" />
+  <parameter name="GUI_TIMESTAMP_WRITEBACK" value="0" />
+  <parameter name="DATA_BYTEENABLE_WIDTH" value="4" />
+  <generatedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_prefetcher_1932/synth/altera_msgdma_prefetcher.v"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_prefetcher_1932/synth/altera_msgdma_prefetcher_read.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_prefetcher_1932/synth/altera_msgdma_prefetcher_write_back.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_prefetcher_1932/synth/altera_msgdma_prefetcher_fifo.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_prefetcher_1932/synth/altera_msgdma_prefetcher_interrrupt.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_prefetcher_1932/synth/altera_msgdma_prefetcher_csr.v"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_prefetcher_1932/synth/altera_msgdma_prefetcher.v"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_prefetcher_1932/synth/altera_msgdma_prefetcher_read.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_prefetcher_1932/synth/altera_msgdma_prefetcher_write_back.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_prefetcher_1932/synth/altera_msgdma_prefetcher_fifo.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_prefetcher_1932/synth/altera_msgdma_prefetcher_interrrupt.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/altera_msgdma_prefetcher_1932/synth/altera_msgdma_prefetcher_csr.v"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/eip/altera_msgdma/prefetcher/altera_msgdma_prefetcher_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="qsys_top_msgdma_0_altera_msgdma_1932_k7ydxky"
+     as="prefetcher_internal" />
+  <messages>
+   <message level="Info" culprit="qsys_top_msgdma_0">"Generating: altera_msgdma_prefetcher"</message>
+  </messages>
+ </entity>
+ <entity kind="dma_read_master" version="19.2.1" name="read_master">
+  <parameter name="FIX_ADDRESS_WIDTH" value="32" />
+  <parameter name="DEVICE_FAMILY" value="Agilex 5" />
+  <generatedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/dma_read_master_1921/synth/read_master.v"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/dma_read_master_1921/synth/MM_to_ST_Adapter.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/dma_read_master_1921/synth/read_burst_control.v"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/dma_read_master_1921/synth/read_master.v"
+       attributes="TOP_LEVEL_FILE" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/dma_read_master_1921/synth/MM_to_ST_Adapter.v"
+       attributes="" />
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_msgdma_0/dma_read_master_1921/synth/read_burst_control.v"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/p/psg/swip/releases6/acdskit/25.3/109/linux64/ip/altera/eip/altera_msgdma/read_master/read_master_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="qsys_top_msgdma_0_altera_msgdma_1932_k7ydxky"
+     as="read_mstr_internal" />
+  <messages>
+   <message level="Info" culprit="qsys_top_msgdma_0">"Generating: read_master"</message>
+  </messages>
+ </entity>
+</deploy>

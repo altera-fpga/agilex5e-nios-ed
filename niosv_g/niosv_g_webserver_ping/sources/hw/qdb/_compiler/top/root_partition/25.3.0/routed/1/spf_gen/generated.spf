@@ -1,0 +1,22 @@
+<session>
+  <display_attributes/>
+  <instance enable_logging="true" entity_name="issp_issp_rst" is_auto_node="true" name="issp_rst">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="9" version="0"/>
+    <sources>
+      <source name="set_1000"/>
+      <source name="phy_resetn"/>
+    </sources>
+    <probes>
+      <probe name="ena_10"/>
+      <probe name="eth_mode"/>
+      <probe name="GND(probe[2])"/>
+    </probes>
+    <view>
+      <view_node expanded="true" index="2" node_type="probe" view_type="independent"/>
+      <view_node expanded="true" index="1" node_type="probe" view_type="independent"/>
+      <view_node expanded="true" index="0" node_type="probe" view_type="independent"/>
+      <view_node expanded="true" index="1" node_type="source" view_type="independent"/>
+      <view_node expanded="true" index="0" node_type="source" view_type="independent"/>
+    </view>
+  </instance>
+</session>

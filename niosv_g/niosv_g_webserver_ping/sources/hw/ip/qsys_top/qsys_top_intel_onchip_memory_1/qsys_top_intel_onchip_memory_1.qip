@@ -1,0 +1,45 @@
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_TOOL_VERSION "25.3"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_TOOL_VENDOR_NAME "Altera"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_TOP_LEVEL_COMPONENT_NAME "intel_onchip_memory"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name PRE_COMPILED_MODULE "ON"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name OCS_IP_FILE [file join $::quartus(qip_path) "../qsys_top_intel_onchip_memory_1.ip"]
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name OCS_IP_TYPE "intel_onchip_memory"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name OCS_IP_VERSION "1.4.10"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name OCS_IP_HASH "5wi3sta"
+set_global_assignment -library "qsys_top_intel_onchip_memory_1" -name SOPCINFO_FILE [file join $::quartus(qip_path) "qsys_top_intel_onchip_memory_1.sopcinfo"]
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name SLD_INFO "QSYS_NAME qsys_top_intel_onchip_memory_1 HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "qsys_top_intel_onchip_memory_1" -name MISC_FILE [file join $::quartus(qip_path) "qsys_top_intel_onchip_memory_1.cmp"]
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_TARGETED_DEVICE_FAMILY "Agilex 5"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_GENERATED_DEVICE_FAMILY "{Agilex 5}"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "qsys_top_intel_onchip_memory_1" -name MISC_FILE [file join $::quartus(qip_path) "../qsys_top_intel_onchip_memory_1.ip"]
+
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta" -library "intel_onchip_memory_1410" -name IP_COMPONENT_NAME "cXN5c190b3BfaW50ZWxfb25jaGlwX21lbW9yeV8xX2ludGVsX29uY2hpcF9tZW1vcnlfMTQxMF81d2kzc3Rh"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta" -library "intel_onchip_memory_1410" -name IP_COMPONENT_DISPLAY_NAME "T24tQ2hpcCBNZW1vcnkgSUkgKFJBTSBvciBST00pIElQ"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta" -library "intel_onchip_memory_1410" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta" -library "intel_onchip_memory_1410" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta" -library "intel_onchip_memory_1410" -name IP_COMPONENT_AUTHOR "QWx0ZXJh"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta" -library "intel_onchip_memory_1410" -name IP_COMPONENT_VERSION "MS40LjEw"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta" -library "intel_onchip_memory_1410" -name IP_COMPONENT_GROUP "QmFzaWMgRnVuY3Rpb25zL09uIENoaXAgTWVtb3J5"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta" -library "intel_onchip_memory_1410" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzEzMC9jdXJyZW50L29uLWNoaXAtbWVtb3J5LWlpLXJhbS1vci1yb20taW50ZWwtZnBnYS1pcC5odG1s"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta" -library "intel_onchip_memory_1410" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly93d3cuaW50ZWwuY29tL2NvbnRlbnQvd3d3L3VzL2VuL2RvY3MvcHJvZ3JhbW1hYmxlLzY4MzEzMC9jdXJyZW50L29uLWNoaXAtbWVtb3J5LWlpLXJhbS1hbmQtcm9tLWludGVsLmh0bWw="
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_COMPONENT_NAME "cXN5c190b3BfaW50ZWxfb25jaGlwX21lbW9yeV8x"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_COMPONENT_AUTHOR "QWx0ZXJh"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1" -library "qsys_top_intel_onchip_memory_1" -name IP_COMPONENT_VERSION "MS4w"
+
+
+set_global_assignment -library "intel_onchip_memory_1410" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "intel_onchip_memory_1410/synth/qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta.sv"]
+set_global_assignment -library "intel_onchip_memory_1410" -name SOURCE_FILE [file join $::quartus(qip_path) "intel_onchip_memory_1410/synth/qsys_top_intel_onchip_memory_1_sys_cpu_ram.hex"]
+set_global_assignment -library "qsys_top_intel_onchip_memory_1" -name VERILOG_FILE [file join $::quartus(qip_path) "synth/qsys_top_intel_onchip_memory_1.v"]
+
+
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta" -library "intel_onchip_memory_1410" -name IP_TOOL_NAME "intel_onchip_memory"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta" -library "intel_onchip_memory_1410" -name IP_TOOL_VERSION "1.4.10"
+set_global_assignment -entity "qsys_top_intel_onchip_memory_1_intel_onchip_memory_1410_5wi3sta" -library "intel_onchip_memory_1410" -name IP_TOOL_ENV "QsysPrimePro"
+

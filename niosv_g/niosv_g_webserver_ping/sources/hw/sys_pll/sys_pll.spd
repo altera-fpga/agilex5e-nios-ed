@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="altera_iopll_2100/sim/sys_pll_altera_iopll_2100_t2lzfza.vo"
+   type="VERILOG"
+   library="altera_iopll_2100" />
+ <file
+   path="sim/sys_pll.v"
+   type="VERILOG"
+   library="sys_pll"
+   hasInlineConfiguration="true" />
+ <topLevel name="sys_pll.sys_pll" />
+ <deviceFamily name="agilex5" />
+ <device name="A5ED065BB32AE6SR0" />
+</simPackage>

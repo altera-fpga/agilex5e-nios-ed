@@ -1,0 +1,18 @@
+# system info issp on 2025.10.22.04:04:36
+system_info:
+name,value
+DEVICE,A5ED065BB32AE6SR0
+DEVICE_FAMILY,Agilex 5
+GENERATION_ID,0
+#
+#
+# Files generated for issp on 2025.10.22.04:04:36
+files:
+filepath,kind,attributes,module,is_top
+sim/issp.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,issp,true
+altera_in_system_sources_probes_1921/sim/altsource_probe.v,VERILOG,,altsource_probe,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+issp.in_system_sources_probes_0,altsource_probe

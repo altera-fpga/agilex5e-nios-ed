@@ -1,0 +1,4 @@
+22 serialization::archive 20 0 1 0 0 4 0 0 0 16 default_jtag.sdc 0 0 10 text_model 0 0 0 1 1 
+ 5 ipgen 6 folder 0 1 1 
+ 14 root_partition 6 folder 0 1 1 
+ 15 sld_sysconfiles 6 folder 0 1 1 

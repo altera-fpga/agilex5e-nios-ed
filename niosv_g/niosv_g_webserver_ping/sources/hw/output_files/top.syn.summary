@@ -1,0 +1,9 @@
+Synthesis Status : Successful - Tue Oct 28 04:20:28 2025
+Revision Name : top
+Top-level Entity Name : top
+Family : Agilex 5
+Quartus Prime Version : 25.3.0 Build 109 09/24/2025 SC Pro Edition
+Device : A5ED065BB32AE6SR0
+Logic utilization estimate (in ALMs) : 11,921 / 222,400 ( 5 % )
+Total dedicated logic registers : 11734
+Estimated DSP Blocks Post-Merging : 2

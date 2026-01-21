@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2025.10.28.04:17:24"
+ outputDirectory="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_reset_bridge_0/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex 5"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="A5ED065BB32AE6SR0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_BOARD"
+     type="String"
+     defaultValue="Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="in_reset" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="in_reset" direction="input" role="reset" width="1" />
+  </interface>
+  <interface name="out_reset" kind="reset" start="1">
+   <property name="associatedClock" value="clk" />
+   <property name="associatedDirectReset" value="in_reset" />
+   <property name="associatedResetSinks" value="in_reset" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="out_reset" direction="output" role="reset" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   kind="qsys_top_reset_bridge_0"
+   version="1.0"
+   name="qsys_top_reset_bridge_0">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="A5ED065BB32AE6SR0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex 5" />
+  <parameter
+     name="AUTO_BOARD"
+     value="Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_reset_bridge_0/synth/qsys_top_reset_bridge_0.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_reset_bridge_0/synth/qsys_top_reset_bridge_0.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/hw/ip/qsys_top/qsys_top_reset_bridge_0.ip" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <messages>
+   <message level="Info" culprit="qsys_top_reset_bridge_0">"Generating: qsys_top_reset_bridge_0"</message>
+  </messages>
+ </entity>
+</deploy>

@@ -5,15 +5,36 @@
 ## Description
 
 The example design demonstrates ping application. The Nios V/g acts as the core. The Triple Speed Ethernet (TSE) IP is configured in RGMII mode and connectes to the onboard 88E1512 PHY via RGMII interface. 
+
 The design has 2 MSGDMA IPs configured in Memory Mapped to Stream (MM2S) mode for Transmission and Stream to Memory Mapped (S2MM) mode for Reception.
 
 To test the application, connect the RGMII Interface of the Agilex 5 Development Kit to the Link Partner using RJ-45 cable.
+
 Ensure that the IP addresses are modified accordingly in the application code under the following location - sw/app_freertos/main.c
+
 Once the application binaries are downloaded (See section 3.d below for the steps), the board starts pinging the link partner automatically.
+
 Observe the Ping Request and Response prints on the terminal.
 
-
 ![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.1/niosv_g/niosv_g_webserver_ping/img/web_server_block_diagram.png)
+
+## Fix for the packet drop issue observed in 25.3
+
+To fix the packet drops that were observed when the board and link partner ping each other in 25.3, make the changes described below:
+
+File to be modified- msgdma_driver.c
+
+File path - sw/bsp_freertos/FreeRTOS_TCP_IP/source/portable/NetworkInterface/AlteraTSE/msgdma_driver.c
+
+Function to be modified- msgdma_InitRxDescList()
+
+Modification- Add the highlighted lines as shown in the figure below
+
+![image](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.1/niosv_g/niosv_g_webserver_ping/img/msgdma_driver_update.png)
+
+Note: The default BSP generated using niosv-bsp command will not have the above changes. Ensure these changes are done manually.
+
+Once done, run niosv-app, cmake and make commands as mentioned in section 3.c below.
 
 ## Project Details
 

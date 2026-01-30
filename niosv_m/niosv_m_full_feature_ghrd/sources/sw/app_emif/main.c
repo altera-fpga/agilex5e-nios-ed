@@ -36,35 +36,35 @@ int main() {
 
     for(i=0; i < DATA_LENGTH; i++) {
 
-        printf("Data read at DDR location 0x%X is : 0x%X \n", (ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE + (i*4)), IORD_32DIRECT(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE, i * 4) );
+        printf("Data read at DDR location 0x%lX is : 0x%X \n", (ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE + (i*4)), IORD_32DIRECT(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE, i * 4) );
 
     }
     //Clear the DDR memory
     for(i=0; i < DATA_LENGTH; i++) {
 
         read_data = IORD_32DIRECT(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE, i * 4);
-        printf("read_data BEFORE clearing DDR is 0x%X \n", read_data);
+        printf("read_data BEFORE clearing DDR is 0x%lX \n", read_data);
         IOWR_32DIRECT(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE, i * 4,(read_data * reset_data));
         read_data = IORD_32DIRECT(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE, i * 4);
-        printf("read_data AFTER clearing DDR is 0x%X \n", read_data);
+        printf("read_data AFTER clearing DDR is 0x%lX \n", read_data);
 
-        printf("Reading DDR locations after Write data 0x%X at DDR location 0x%X : is : 0x%X\n", reset_data , (ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE + (i*4)), IORD_32DIRECT(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE, i * 4) );
+        printf("Reading DDR locations after Write data 0x%lX at DDR location 0x%lX : is : 0x%X\n", reset_data , (ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE + (i*4)), IORD_32DIRECT(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE, i * 4) );
 
     }
 
     //Write DATA to DDR memory
     for(i=0; i < DATA_LENGTH; i++) {
-        printf("Writing String 0x%X to DDR location : 0x%X\n", write_data,(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE + (i*4)) );
+        printf("Writing String 0x%lX to DDR location : 0x%lX\n", write_data,(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE + (i*4)) );
         read_data = IORD_32DIRECT(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE, i * 4);
         IOWR_32DIRECT(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE, (i * 4),0xdeafdead);
         read_data = IORD_32DIRECT(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE, i * 4);
-        printf("DATA READ AFTER WRITING STRING TO DDR is 0x%X \n", read_data);
+        printf("DATA READ AFTER WRITING STRING TO DDR is 0x%lX \n", read_data);
 
-        printf("Reading DDR locations after Write STRING data 0x%X at DDR location 0x%X : is : 0x%X\n", write_data , (ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE + (i*4)), IORD_32DIRECT(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE, i * 4) );
+        printf("Reading DDR locations after Write STRING data 0x%lX at DDR location 0x%lX : is : 0x%X\n", write_data , (ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE + (i*4)), IORD_32DIRECT(ADDRESS_SPAN_EXTENDER_0_WINDOWED_SLAVE_BASE, i * 4) );
 
         // Compare write and read
         if (read_data != write_data) {
-            printf("MISMATCH at index %d: Wrote 0x%X, Read 0x%X\n", i, write_data, read_data);
+            printf("MISMATCH at index %ld: Wrote 0x%lX, Read 0x%lX\n", i, write_data, read_data);
             mismatch = 1;
         }
 

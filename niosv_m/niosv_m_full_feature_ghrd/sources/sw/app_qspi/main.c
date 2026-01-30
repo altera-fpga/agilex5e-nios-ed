@@ -83,8 +83,11 @@
 #include <system.h>
 #include <unistd.h>
 #include <string.h>
+#include <stdlib.h>
 #include <intel_mailbox_client_flash.h>
 #include <intel_mailbox_client.h>
+
+void close_flash(intel_mailbox_client* fd);
 
 int main (){
 
@@ -260,9 +263,9 @@ int main (){
 
 	//Write using send_cmd
 		ret_code = mailbox_client_flash_erase_block(fd, 0x00010000,sector_size);
-		int arg[2];
-		int input_data[1];
-		int resp_buff[1];
+		alt_u32 arg[2];
+		alt_u32 input_data[1];
+		alt_u32 resp_buff[1];
 
 		int id = 2;
 		int cmd = 0x3a;
@@ -275,7 +278,7 @@ int main (){
 		ret_code = mailbox_client_send_cmd(fd, id, cmd, arg, arg_length, cmd_length, input_data, resp_buff, resp_length);
 		if(ret_code == 0)
 		{
-			printf("Read Results = 0x%08X.\n", resp_buff[0]);
+			printf("Read Results = 0x%08lX.\n", resp_buff[0]);
 		}
 
 
@@ -305,7 +308,7 @@ int main (){
 		ret_code = mailbox_client_send_cmd(fd, id, cmd, arg, arg_length, cmd_length, input_data, resp_buff, resp_length);
 		if(ret_code == 0)
 		{
-			printf("Read Results = 0x%08X.\n", resp_buff[0]);
+			printf("Read Results = 0x%08lX.\n", resp_buff[0]);
 		}
 
 	//Close Flash
@@ -313,7 +316,6 @@ int main (){
 	}
 
 }
-
 
 void close_flash(intel_mailbox_client* fd)
 {

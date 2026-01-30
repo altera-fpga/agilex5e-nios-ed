@@ -18,10 +18,9 @@
 #include "alt_types.h"
 #include "sys/alt_sys_wrappers.h"
 
-#define MIN_ALARMS 5
 #define ALARM_RATE 20
 
-volatile alt_u32 m_alarm_cnt = 0;
+volatile alt_u32 simple_cnt = 0;
 alt_alarm m_the_alarm;
 
 //void initialize_sw_timer_interrupt (void);
@@ -34,7 +33,7 @@ int usleep(useconds_t usec);
 
 
 alt_u32 alarm_cb(void *context) {
-    ++m_alarm_cnt;
+    ++simple_cnt;
     return ALARM_RATE;
 }
 
@@ -57,72 +56,65 @@ void initialize_interval_timer_interrupt (void)
 
 static void isr_interval_timer (void * context, alt_u32 id)
 {
-
-	static int num =0 ;
 	/* Once serviced, clear the interrupt */
-
-	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE,0x0);
-	
-	printf("Interrupt Serviced # %d\n",num++);
-
-	printf("SYS ID is 0x%x\n", IORD_ALTERA_AVALON_SYSID_QSYS_ID(SYSID_QSYS_0_BASE));
-
-	// Disable the timer after it has serviced 10 times
-	if (num >= 10)
-	{
-		//IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, 0x0); // Disable the timer
-		IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_STOP_MSK); // Explicitly stop the timer
-
-		printf("Timer disabled after 10 interrupts.\n");
-	}
-
-
+	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE,0x0);	
+	++simple_cnt;
 }
 
-static void initialize_sw_timer_interrupt (void)
+int main()
 {
-	// Utilizing the alarm function for sw timer interrupts
+		
+	printf("Example Design to showcase different approach to implement periodical interrupts: \n\n");
+	
+	//Start the Alarm
+	printf("Approach 1 --- Alarms \n");
+	printf("With the Nios V processor internal timer ticks 1000 per seconds,\nthe alarm callback function (a count-up counter) is triggered about 50 times in 1 second when alarm's nticks is 20\n\n");
+	
 	alt_alarm_start(&m_the_alarm, ALARM_RATE, alarm_cb, NULL);
+	// Wait for 1.5 second
+	ALT_USLEEP(1500000);
+	alt_alarm_stop(&m_the_alarm);
+	printf("Turn on Alarm for 1.5 second...\n");
+	printf ("Counter is at %ld, which should be close to %d times\n", simple_cnt, NIOSV_INTERNAL_TIMER_TICKS_PER_SECOND/ALARM_RATE*3/2);
+	// Alarm Trigger in 1 second = Total ticks in 1 second divide by Alarm tick counts
+	// Alarm Trigger in 1 second = Total ticks in 1.5 seconds divide by Alarm tick counts
+	printf ("Resetting simple counter\n");
+	simple_cnt=0;
+	
+	
+	alt_alarm_start(&m_the_alarm, ALARM_RATE, alarm_cb, NULL);
+	// Wait for 0.5 second
+	ALT_USLEEP(500000);
+	alt_alarm_stop(&m_the_alarm);
+	printf("Turn on Alarm for another 0.5 second...\n");
+	printf ("Counter is at %ld, which should be close to %d times\n", simple_cnt, NIOSV_INTERNAL_TIMER_TICKS_PER_SECOND/ALARM_RATE/2);
+	printf ("Resetting simple counter\n\n");
+	simple_cnt=0;
+		
+		
+	//Start the Interval Timer IP as Platform Interrupt
+	printf("Approach 2 --- Interval Timer IP as Platform Interrupt \n");
+	printf("With the Interval Timer IP sending interrupt every second,\nthe Interval Timer IP ISR (also a count-up counter) is triggered 1 times in 1 second\n\n");
+	
+	
+	initialize_interval_timer_interrupt();
+	// Wait for 3 second
+	ALT_USLEEP(3000000);
+	IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_STOP_MSK); // Explicitly stop the timer
+	printf("Turn on Interval Timer IP for 3 second...\n");
+	printf ("Counter is at %ld, which should be close to %d times\n", simple_cnt, 3*1000/TIMER_0_PERIOD); 
+	// Interrupt Trigger in 1 second = 1000 milliseconds divide by timeout period
+	// Interrupt Trigger in 3 seconds = 3*1000 milliseconds divide by timeout period
+	printf ("Resetting simple counter\n");
+	simple_cnt=0;
+
+	
+	initialize_interval_timer_interrupt();
+	// Wait for 2 second
+	ALT_USLEEP(2000000);
+	IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_STOP_MSK); // Explicitly stop the timer
+	printf("Turn on Interval Timer IP for 2 second...\n");
+	printf ("Counter is at %ld, which should be close to %d times\n\n", simple_cnt, 2*1000/TIMER_0_PERIOD);
+	
+	return 0;		
 }
-
-
-
-	int main()
-	{
-	
-		int i;
-		
-		printf("Example Design to showcase the SW Timer and Timer Interval Interrupts being serviced \n");
-		printf("SW Timer Interrupt alarm triggerd \n");
-		initialize_sw_timer_interrupt();
-		// Wait for n cycles
-		ALT_USLEEP(1000000);
-		/*
-		for (i = 0; i < 1000000; i++)
-		{
-			__asm__("NOP");
-		}
-		*/
-		printf("Out of sleep \n");
-		
-		// Call the timer function
-		initialize_interval_timer_interrupt();
-	
-		
-		if (m_alarm_cnt < MIN_ALARMS) {
-			printf("Potential issue with alarm callback, it only occurred %lu times...\n", m_alarm_cnt);
-		} else {
-			printf ("Alarm triggered by internal sw timer Interrupt %d number of times \n",m_alarm_cnt);
-		}
-
-
-		
-
-	
-		while(1)
-		{
-		}
-	
-		return 0;
-		
-	}

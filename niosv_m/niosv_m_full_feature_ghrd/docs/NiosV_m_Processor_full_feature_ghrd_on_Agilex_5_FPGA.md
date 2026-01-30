@@ -100,6 +100,8 @@ Refer to [Agilex™ 5 FPGA Premium Development Kit User Guide](https://www.intel
 - Run the following command in the terminal from top level project directory:
  
 ```console
+cp custom_logic/emif_axi_adaptor_hw.tcl hw 
+cp custom_logic/emif_axi_handler.sv hw 
 quartus_py ./scripts/build_sof.py
 ```
 

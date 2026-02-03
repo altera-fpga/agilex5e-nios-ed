@@ -1,9 +1,0 @@
-/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/sw/app_freertos/build/CMakeFiles/rebuild_cache.dir
-/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/sw/app_freertos/build/CMakeFiles/create-hex.dir
-/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/sw/app_freertos/build/CMakeFiles/niosv-stack-report.dir
-/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/sw/app_freertos/build/CMakeFiles/app_freertos.elf.dir
-/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/sw/app_freertos/build/CMakeFiles/edit_cache.dir
-/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/sw/app_freertos/build/CMakeFiles/create-objdump.dir
-/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/sw/app_freertos/build/bsp_freertos/CMakeFiles/rebuild_cache.dir
-/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/sw/app_freertos/build/bsp_freertos/CMakeFiles/freertos_bsp.dir
-/nfs/site/disks/swuser_work_knithink/25.3/git/release/agilex5e-nios-ed/niosv_g/niosv_g_webserver_ping/sources/sw/app_freertos/build/bsp_freertos/CMakeFiles/edit_cache.dir

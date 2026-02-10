@@ -20,7 +20,7 @@ The objective of the design is to accomplish data transfer between the processor
 - **Design Package**: agilex5_niosv_m_full_feature_ghrd.zip
 - **Category**: GHRD
 - **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/25.3.1/niosv_m/niosv_m_full_feature_ghrd
-- **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.1.1-v1.0/agilex5_niosv_m_full_feature_ghrd.zip
+- **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/25.3.1-v1.0/agilex5_niosv_m_full_feature_ghrd.zip
 
 ## Documentation
 

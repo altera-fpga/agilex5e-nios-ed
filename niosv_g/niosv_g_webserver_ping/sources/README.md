@@ -137,7 +137,7 @@ quartus_stp -t ready_to_test/toggle_issp.tcl
 ```
 - Download the elf file on the board 
 ```    
-niosv-download -g ready_to_test/app.elf -c 1
+niosv-download -g ready_to_test/app_freertos.elf -c 1
 ``` 
 - Verify the output on the terminal by using the following command in the terminal:
 ``` 

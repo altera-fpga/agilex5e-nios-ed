@@ -12,7 +12,6 @@ The following table contains the list of Acronyms that the user may come across 
 | RTOS | Real Time Operating System |
 | ECC | Error-Correcting Code |
 | TCM | Tightly Coupled Memory |
-| GHRD | Golden Hardware Reference Design |
 | SSS | Simple Socket Server |
 | CI | Custom Instrcution |
 | CRC | Cyclic Redundancy Check |
@@ -34,6 +33,4 @@ The following table contains the list of the designs on Agilex 5 FPGA E-Series 0
 
 | No # | Design Name Prefix (Nios V core) | Design Name Suffix (Functions) | Description |
 | - | --- | ------ | ----------- |
-| 1 | Nios V/g | Nios V/g Webserver Ping Design | This design demonstrates the Ping application using the Triple Speed Ethernet IP <br>[Design details](niosv_g/niosv_g_webserver_ping/docs/Nios_Vg_Processor_Webserver_Ping_Design_on_Agilex_5_FPGA.md) |
-| 2 | Nios V/g | Nios V/g TinyML LiteRT | This design demonstrates the TinyML application using LiteRT for microcontrollers software with Nios® V/g processor<br>[Design details](niosv_g/tinyml_liteRT/docs/Nios_Vg_Processor_TinyML_Design_on_Agilex_5_FPGA.md) |
-| 3 | Nios V/m | Nios V/m Full Feature Golden Hardware Reference Design (GHRD) | This design demonstrates the Full Feature Golden Hardware Reference Design (GHRD) that showcases the connectivity to multiple peripherals required for application execution <br>[Design details](niosv_m/niosv_m_full_feature_ghrd/docs/NiosV_m_Processor_full_feature_ghrd_on_Agilex_5_FPGA.md)|
+| 1 | Nios V/g | Nios® V/g Soft-SoC System Example Design | This design demonstrates the Soft-SoC System Example Design that showcases the connectivity to multiple peripherals with Nios® V/g processor as the core <br>[Design details](niosv_g/niosv_g_soft_soc_system_example_design/docs/Niosv_g_processor_soft_soc_system_example_design_on_Agilex_5_FPGA.md)|

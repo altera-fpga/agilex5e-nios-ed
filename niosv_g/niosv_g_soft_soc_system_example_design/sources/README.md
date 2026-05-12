@@ -88,7 +88,7 @@ c. Creating the bsp, build software sources and download elf
 - Clean the app build project before regenerating elf
 
 ```     
-niosv-bsp -c --quartus-project=hw/top.qpf --qsys=hw/qsys_top.qsys --type=hal sw/bsp/settings.bsp
+niosv-bsp --create --system=./hw/src/vds/qsys_top/qsys_top.vds --quartus-project=hw/top.qpf --type=hal sw/bsp/settings.bsp
 
 - qspi_app
 niosv-app --bsp-dir=sw/bsp --app-dir=sw/app_qspi --srcs=sw/app_qspi/main.c

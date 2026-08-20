@@ -9,7 +9,7 @@ The objective of the design is to accomplish data transfer between the processor
 
 This design is created on the Quartus Visual Designer Studio. Fore more Information please visit here Visual Designer Studio[https://www.altera.com/products/development-tools/visual-designer-studio].
  
- ![Block Diagram](https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/26.1/niosv_g/niosv_g_soft_soc_system_example_design/img/soft_soc_system_example_block_design.png)
+ ![Block Diagram](https://github.com/altera-fpga/agilex5-ed-niosv/blob/rel/26.1.1/niosv_g/niosv_g_soft_soc_system_example_design/img/soft_soc_system_example_block_design.png)
 
 ## Project Details
 
@@ -17,18 +17,18 @@ This design is created on the Quartus Visual Designer Studio. Fore more Informat
 - **Source**: Github
 - **Design Support**: CTH
 - **Family**: Agilex 5
-- **Quartus Version**: 26.1
+- **Quartus Version**: 26.1.1
 - **Development Kit**: Agilex 5 FPGA E-Series 065B Premium Development Kit DK-A5E065BB32AES1
 - **Device Part**: A5ED065BB32AE6SR0
 - **Design Package**: agilex5_niosv_g_soft_soc_system_example_design.zip
 - **Category**: Nios V
-- **URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/26.1/niosv_g/niosv_g_soft_soc_system_example_design
-- **download URL**: https://github.com/altera-fpga/agilex5e-nios-ed/releases/download/26.1/agilex5_niosv_g_soft_soc_system_example_design.zip
+- **URL**: https://github.com/altera-fpga/agilex5-ed-niosv/blob/rel/26.1.1/niosv_g/niosv_g_soft_soc_system_example_design
+- **download URL**: https://github.com/altera-fpga/agilex5-ed-niosv/releases/download/26.1.1/agilex5_niosv_g_soft_soc_system_example_design.zip
 
 ## Documentation
 
 - **Title**: Design Document
-**URL**: https://github.com/altera-fpga/agilex5e-nios-ed/blob/rel/26.1/niosv_g/niosv_g_soft_soc_system_example_design/docs/Niosv_g_processor_soft_soc_system_example_design_on_Agilex_5_FPGA.md
+**URL**: https://github.com/altera-fpga/agilex5-ed-niosv/blob/rel/26.1.1/niosv_g/niosv_g_soft_soc_system_example_design/docs/Niosv_g_processor_soft_soc_system_example_design_on_Agilex_5_FPGA.md
 
 # Getting Started
 
@@ -86,6 +86,11 @@ c. Creating the bsp, build software sources and download elf
 - To create software app, run the following commands in the terminal:
 
 - Clean the app build project before regenerating elf
+
+Optional: If the `.hex` file is not required, run the following command before running `cmake` to comment out the hex file creation section in the each application `CMakeLists.txt` files:
+```
+perl scripts/comment_hex.pl <PATH>/sw/app_*/CMakeLists.txt
+```
 
 ```     
 niosv-bsp --create --system=./hw/src/vds/qsys_top/qsys_top.vds --quartus-project=hw/top.qpf --type=hal sw/bsp/settings.bsp

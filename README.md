@@ -23,6 +23,7 @@ There are three variants of the NiosV core:
     
     b. Nios V/g core - General-Purpose Processor- High Performance (For interrupt driven baremetal and RTOS code)
 
+    c. Nios V/c core - Compact Microcontroller- Smallest (For non-interrupt driven baremetal code)
 
 # 1. a5e065b-prem-devkit   
 Example Designs using Nios V as the core based on Agilex™ 5 FPGA E-Series 065B Premium Development Kit

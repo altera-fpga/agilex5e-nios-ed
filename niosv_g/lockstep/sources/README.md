@@ -29,7 +29,7 @@ This design demonstrates the working of NiosV/g lockstep feature through the sta
 
 ### Prerequisites
 
- -  Agilex® 7 FPGA F-Series Development Kit, ordering code DK-DEV-AGF014EA. Refer to the board documentation for more information about the development kit.
+ - Agilex™ 5 FPGA and SoC E-Series Premium Development Kit, ordering code DK-A5E065BB32AEA. Refer to the board documentation for more information about the development kit.
  - Mini and Micro USB Cable. Included with the development kit.
  
 ### Release Contents  

@@ -27,7 +27,7 @@ There are three variants of the NiosV core:
 # 1. a5e065b-prem-devkit   
 Example Designs using Nios V as the core based on Agilex™ 5 FPGA E-Series 065B Premium Development Kit
 
-Development Kit product page- https://www.intel.com/content/www/us/en/products/details/fpga/development-kits/agilex/a5e065b-premium.html 
+Development Kit product page-  https://www.altera.com/products/devkit/po-3284/agilex-5-fpga-e-series-065b-premium-development-kit.html
 
 The following table contains the list of the designs on Agilex 5 FPGA E-Series 065B Premium Development Kit
 
